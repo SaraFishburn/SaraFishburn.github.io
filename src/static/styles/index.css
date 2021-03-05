@@ -1,0 +1,35 @@
+.heading {
+  margin: auto;
+  margin-top: 350px;
+  width: fit-content;
+}
+
+.heading h2 {
+  color: var(--accent);
+  font-size: 1.4rem;
+  font-weight: 100;
+}
+
+.heading h1 {
+  color: var(--light-1);
+  font-size: 2.8rem;
+}
+
+.heading h3 {
+  color: var(--light-2);
+  opacity: 0.6;
+  font-size: 1.3rem;
+}
+
+.headshot img {
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  height: 200px;
+  width: auto;
+  position: absolute;
+}
+
+
+#grayscale-headshot:hover {
+  opacity: 0;
+}
+
