@@ -1,0 +1,123 @@
+:root {
+  --accent: #00e9f9;
+  --light-1: #e1e3e4;
+  --light-2: #c3c4c8;
+  --dark-1: #647286;
+  --dark-2: #434f61;
+  --dark-3: #283447;
+  --dark-4: #092138;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--dark-2);
+  background: -moz-linear-gradient(180deg, var(--dark-2) 0%, var(--dark-4) 40%);
+  background: -webkit-linear-gradient(180deg, var(--dark-2) 0%, var(--dark-4) 40%);
+  background: linear-gradient(180deg, var(--dark-2) 0%, var(--dark-4) 40%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--dark-2)",endColorstr="var(--dark-4) ",GradientType=1);
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  background-color: var(--dark-4);
+  position: fixed;
+  width: 100vw;
+  flex-direction: column;
+  z-index: 100;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+}
+
+.logo-hamburger {
+  display: flex;
+}
+
+.nav-logo {
+  line-height: 0;
+  display: inline-block;
+  margin: 20px;
+  z-index: 100;
+}
+
+.nav-logo img {
+  height: 30px;
+  width: auto;
+}
+
+.hamburger {
+  align-self: center;
+  top: 0;
+  margin: 5px 20px 0px auto;
+}
+
+.hamburger i {
+  color: white;
+  opacity: 80%;
+  font-size: 2.3rem;
+}
+
+.nav-links {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  
+  width: 100vw;
+  height: 100vh;
+
+  padding: 0;
+  padding-top: 80px;
+  list-style: none;
+  background-color: var(--dark-4);
+
+  transform: translateY(-100%);
+}
+
+.nav-links li {
+  font-family: 'Montserrat', sans-serif;
+  margin: 20px auto 20px 20px;
+  color: white;
+  opacity: 80%;
+  font-size: 2.3rem;
+}
+
+.drip-top {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.drip-top svg {
+  position: absolute;
+  width: 142%;
+  right: 0;
+  /* transform: translateY(-20px); */
+  filter: drop-shadow(0 4px 5px rgba(0,0,0,0.14)) drop-shadow(0 1px 10px rgba(0,0,0,0.12)) drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  -webkit-filter: drop-shadow(0 4px 5px rgba(0,0,0,0.14)) drop-shadow(0 1px 10px rgba(0,0,0,0.12)) drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+
+.drip-top svg:nth-child(1) {
+  color: var(--dark-2);
+  transform: translateY(60px);
+}
+
+.drip-top svg:nth-child(2) {
+  color: var(--dark-3);
+  transform: translateY(30px);
+}
+
+.drip-top svg:nth-child(3) {
+  color: var(--dark-4);
+}
+
+
+

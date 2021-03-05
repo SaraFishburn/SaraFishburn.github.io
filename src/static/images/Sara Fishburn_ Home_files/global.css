@@ -1,0 +1,45 @@
+:root {
+  --accent: #00e9f9;
+  --light-1: #e1e3e4;
+  --light-2: #c3c4c8;
+  --dark-1: #647286;
+  --dark-2: #434f61;
+  --dark-3: #283447;
+  --dark-4: #092138;
+}
+
+body {
+  margin: 0;
+  background-color: var(--dark-2);
+  background: -moz-linear-gradient(180deg, var(--dark-2) 0%, var(--dark-4) 27%);
+  background: -webkit-linear-gradient(180deg, var(--dark-2) 0%, var(--dark-4) 27%);
+  background: linear-gradient(180deg, var(--dark-2) 0%, var(--dark-4) 27%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--dark-2)",endColorstr="var(--dark-4) ",GradientType=1);
+  height: 100vh;
+}
+
+nav {
+  background-color: var(--dark-4);
+  position: fixed;
+  width: 100vw;
+}
+
+.nav-logo {
+  line-height: 0;
+  display: inline-block;
+  margin: 20px;
+}
+
+.nav-logo img {
+  height: 30px;
+  width: auto;
+}
+
+.nav-links a {
+  font-family: 'Montserrat', sans-serif;
+}
+
+main {
+  
+}
+
