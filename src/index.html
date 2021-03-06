@@ -32,7 +32,12 @@
       <a class="nav-logo" href="#">
         <img  src="static/images/logo/logo.svg" alt="Logo graphic depicting a stylised letter 's' and 'f'" >
       </a>
-      <a class="hamburger" href="#"><i class="ri-menu-3-line"></i></a>
+      <a id="hamburger-wrapper" href="#">
+        <div id="hamburger">
+          <div id="ham-top"></div>
+          <div id="ham-middle"></div>
+          <div id="ham-bottom"></div>
+        </div></a>
     </div>
 
     <ul class="nav-links">
@@ -65,14 +70,20 @@
     </section>
 
     <!-- profile pic -->
-    <div class="headshot">
-      <img src="static/images/headshot.jpg" alt="Color headshot of Sara Fishburn">
-      <img id="grayscale-headshot" src="static/images/bwheadshot.jpg" alt="Black and white headshot of Sara Fishburn">
+    <div id="headshot-wrapper">
+      <div id="headshot">
+        <img src="static/images/headshot.jpg" alt="Color headshot of Sara Fishburn">
+      </div>
+      <svg viewBox="0 0 423.2 981.44">
+        <use xlink:href='static/images/headshot-border.svg#headshot-border'></use>
+      </svg>
     </div>
 
     <!-- text -->
     <article>
-
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, atque. 
+      Enim assumenda sunt voluptatibus, recusandae laborum ad, quisquam soluta blanditiis eveniet culpa, 
+      autem facere expedita adipisci reprehenderit tenetur. Quae, dolorem!
     </article>
 
     
@@ -93,8 +104,26 @@
       <svg viewBox="0 0 1000 564.55">
         <use xlink:href='static/images/drip.svg#drip'></use>
       </svg>
-    </div>
-  
+    </div> 
+    
+    <!-- social media icons -->
+    <span id="media-icons">
+      <a href="#"> 
+        <svg viewBox="0 0 24 24">
+          <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
+        </svg>
+      </a>
+      <a href="#">
+        <svg viewBox="0 0 24 24">
+          <use xlink:href='static/images/icons/linkedin-line.svg#linkedin-line'></use>
+        </svg>
+      </a>
+      <a href="#">
+        <svg viewBox="0 0 24 24">
+          <use xlink:href='static/images/icons/twitter-line.svg#twitter-line'></use>
+        </svg>
+      </a>
+    </span>
   </footer>
 </body>
 </html>
