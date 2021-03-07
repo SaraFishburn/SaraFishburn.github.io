@@ -24,31 +24,54 @@
   <link rel="stylesheet" href="static/styles/index.css">
 
   <title>Sara Fishburn: Home</title>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('hamburger').onclick = function() {
+
+        // toggle hamburger animation
+        document.getElementById('ham-top').classList.toggle('ham-top-transition')
+        document.getElementById('ham-middle').classList.toggle('ham-middle-transition')
+        document.getElementById('ham-bottom').classList.toggle('ham-bottom-transition')
+
+        // lock body scrolling
+        var body = document.body
+        if(document.body.style.overflow == 'hidden')
+          document.body.style.overflow = 'visible';
+        
+        // toggle navbar and drip graphic movement
+        document.getElementById('nav-links').classList.toggle('nav-links-show')
+        document.getElementById('drip-top').classList.toggle('drip-top-slide')
+      }
+    })
+  </script>
+
 </head>
 <body>
   <!-- nav and drip graphic -->
   <nav>
     <div class="logo-hamburger">
       <a class="nav-logo" href="#">
-        <img  src="static/images/logo/logo.svg" alt="Logo graphic depicting a stylised letter 's' and 'f'" >
+        <svg viewBox="0 0 531.66 392.97">
+          <use xlink:href='static/images/logo/logo.svg#logo'></use>
+        </svg>
       </a>
-      <a id="hamburger-wrapper" href="#">
-        <div id="hamburger">
-          <div id="ham-top"></div>
-          <div id="ham-middle"></div>
-          <div id="ham-bottom"></div>
-        </div></a>
+      <div id="hamburger">
+        <div id="ham-top"></div>
+        <div id="ham-middle"></div>
+        <div id="ham-bottom"></div>
+      </div>
     </div>
 
-    <ul class="nav-links">
-      <li><a href="#">SKILLS</a></li>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="skills.html">SKILLS</a></li>
       <li><a href="#">PROJECTS</a></li>
       <li><a href="#">CONTACT</a></li>
     </ul>
   </nav>
   <main>
     <!-- drip top -->
-    <div class="drip-top">
+    <div id="drip-top" class="drip-top">
       <svg viewBox="0 0 1000 564.55">
         <use xlink:href='static/images/drip.svg#drip'></use>
       </svg>
@@ -81,9 +104,13 @@
 
     <!-- text -->
     <article>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, atque. 
-      Enim assumenda sunt voluptatibus, recusandae laborum ad, quisquam soluta blanditiis eveniet culpa, 
-      autem facere expedita adipisci reprehenderit tenetur. Quae, dolorem!
+      Hi there! I'm a current fast-track 
+      <a href="https://coderacademy.edu.au/" target="_blank">Coder Academy</a> 
+      student from Brisbane, Australia. I'm studying a 
+      <span>Diploma of Information Technology</span>
+      to one day become a 
+      <span>full stack dev</span>
+      and help create amazing websites. 
     </article>
 
     
@@ -108,17 +135,17 @@
     
     <!-- social media icons -->
     <span id="media-icons">
-      <a href="#"> 
+      <a href="https://github.com/SaraFishburn" target="_blank"> 
         <svg viewBox="0 0 24 24">
           <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
         </svg>
       </a>
-      <a href="#">
+      <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank">
         <svg viewBox="0 0 24 24">
           <use xlink:href='static/images/icons/linkedin-line.svg#linkedin-line'></use>
         </svg>
       </a>
-      <a href="#">
+      <a href="https://twitter.com/FishburnSara" target="_blank">
         <svg viewBox="0 0 24 24">
           <use xlink:href='static/images/icons/twitter-line.svg#twitter-line'></use>
         </svg>

@@ -1,0 +1,183 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto auto 5px;
+  grid-template-areas: "top-graphic top-graphic"
+                       "header header"
+                       "html js"
+                       "ruby css"
+                       "python python"
+                       "flask c"
+                       "sql empty1"
+                       "footer footer";
+
+  overflow: hidden;
+  position: relative;
+}
+
+.heading {
+  grid-area: header;
+  margin-left: 10%;
+  width: fit-content;
+  margin-bottom: 30px;
+}
+
+.heading h2 {
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+
+.heading h1 {
+  color: var(--light-1);
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+
+.skill-bubble {
+  display: flex;
+  align-items: center;
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
+.skill-bubble div {
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+}
+
+.bottom-circle {
+  background-color: var(--dark-4);
+  width: var(--circle-width);
+  height: var(--circle-width);
+  border-radius: 50%;
+}
+
+.middle-circle {
+  background-color: var(--dark-3);
+  width: calc(var(--circle-width) * 0.85);
+  height: calc(var(--circle-width) * 0.85);
+  border-radius: 50%;
+}
+
+.top-circle {
+  background-color: var(--dark-2);
+  width: calc(var(--circle-width) * 0.65);
+  height: calc(var(--circle-width) * 0.65);
+  border-radius: 50%;
+}
+
+#html-bubble {
+  --circle-width: 47vw;
+  grid-area: html;
+  left: 10%;
+  /* transition: 0.1s linear; */
+  
+}
+
+#js-bubble {
+  --circle-width: 28vw;
+  grid-area: js;
+  left: -5%;
+  top: -5%;
+  /* transition: 0.2s linear; */
+}
+#ruby-bubble {
+  --circle-width: 39vw;
+  grid-area: ruby;
+  top: 10%;
+  /* transition: 0.1s linear; */
+}
+#css-bubble {
+  --circle-width: 42vw;
+  grid-area: css;
+  left: -5%;
+  top: -15%;
+  /* transition: 0.2s linear; */
+}
+#python-bubble {
+  --circle-width: 68vw;
+  grid-area: python;
+  left: 8%;
+  top: 5%;
+  /* transition: 0.2s linear; */
+}
+#flask-bubble {
+  --circle-width: 31vw;
+  grid-area: flask;
+  left: -5%;
+  top: -10%;
+  /* transition: 0.1s linear; */
+}
+#c-bubble {
+  --circle-width: 43vw;
+  grid-area: c;
+  left: -5%;
+  top: 25%;
+  /* transition: 0.1s linear; */
+}
+#sql-bubble {
+  --circle-width: 30vw;
+  grid-area: sql;
+  padding-bottom: 10%;
+  left: 10%;
+  top: 10%;
+  /* transition: 0.2s linear; */
+}
+
+.top-circle svg {
+  position: absolute;
+}
+
+#html {
+  height: calc(var(--circle-width) * 0.7);
+}
+
+#js {
+  height: calc(var(--circle-width) * 0.4);
+}
+
+#ruby {
+  height: calc(var(--circle-width) * 0.4);
+}
+
+#css {
+  height: calc(var(--circle-width) * 0.75);
+}
+
+#python {
+  height: calc(var(--circle-width) * 0.7);
+}
+
+#flask {
+  height: calc(var(--circle-width) * 0.6);
+}
+
+#c {
+  height: calc(var(--circle-width) * 0.9);
+}
+
+#sql {
+  height: calc(var(--circle-width) * 0.45);
+}
+
+#scratch {
+  grid-area: footer;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding-bottom: 50%;
+}
+
+#scratch svg {
+  height: 50vw;
+  transform: translateX(25%);
+}

@@ -19,6 +19,10 @@ h1, h2, h3 {
   padding: 0;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   margin: 0;
   background-color: var(--dark-4);
@@ -30,6 +34,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
+  position: relative;
 }
 
 /* navbar */
@@ -40,11 +45,14 @@ nav {
   width: 100%;
   flex-direction: column;
   z-index: 100;
-  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
 }
 
 .logo-hamburger {
   display: flex;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+  background-color: var(--dark-4);
+  z-index: 100;
+
 }
 
 .nav-logo {
@@ -54,19 +62,22 @@ nav {
   z-index: 100;
 }
 
-.nav-logo img {
+.nav-logo svg {
   height: 30px;
   width: auto;
+  fill: white;
+}
+
+.nav-logo svg:hover {
+  fill: var(--accent);
 }
 
 /* hamburger and animation */
-#hamburger-wrapper {
+#hamburger {
   align-self: center;
   top: 0;
   margin: 0px 20px 0px auto;
-}
 
-#hamburger {
   position: relative;
   height: 1.5rem;
   display: flex;
@@ -74,10 +85,13 @@ nav {
   align-items: flex-end;
   justify-content: space-between;
   opacity: 0.87;
+  z-index: 100;
+  cursor: pointer;
 }
 
 #ham-top, #ham-bottom {
-  position: absolute;
+  transition: 0.5s;
+  position: relative;
   width: 30px;
   height: 2px;
   background-color: white;
@@ -85,8 +99,8 @@ nav {
 }
 
 #ham-middle {
+  transition: 0.5s;
   position: absolute;
-  position: relative;
   width: 15px;
   height: 2px;
   background-color: white;
@@ -94,13 +108,29 @@ nav {
 }
 
 #ham-bottom {
-  position: relative;
-  bottom: 0;
+  position: absolute;
+  top: 100%;
 }
 
+.ham-top-transition {
+  top: calc(50% - 1px) !important;
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+.ham-middle-transition {
+  width: 0px !important;
+  transition: 0.5s;
+}
+
+.ham-bottom-transition {
+  top: calc(50% - 1px) !important;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+}
 
 .nav-links {
-  position: absolute;
+  position: fixed;
   top: 0;
   display: flex;
   flex-direction: column;
@@ -110,10 +140,10 @@ nav {
 
   padding: 0;
   padding-top: 80px;
-  list-style: none;
   background-color: var(--dark-4);
 
-  transform: translateY(-100%);
+  transform: translateY(-95%);
+  transition: 0.6s;
 }
 
 .nav-links li {
@@ -124,12 +154,28 @@ nav {
   font-size: 2.3rem;
 }
 
+.nav-links li:hover {
+  color: var(--accent);
+}
+
+.nav-links-show {
+  transform: translateY(0%);
+  transition: 1s cubic-bezier(.66,-0.66,.15,1.09);
+}
+
 /* top drip graphic */
 .drip-top {
   grid-area: top-graphic;
   width: 100%;
   position: relative;
   transform: translateY(-10px);
+  transition: 0.6s;
+  z-index: 80;
+}
+
+.drip-top-slide {
+  transform: translateY(100vh);
+  transition: 1s cubic-bezier(.66,-0.66,.15,1.09);
 }
 
 .drip-top svg {
