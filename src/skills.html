@@ -56,7 +56,6 @@
       const sql = document.getElementById('sql-bubble')
 
       const els = [html, js, ruby, css, python, flask, c, sql]
-      // const els = [html, js]
       const dist = 0.002
 
       // moving animation event
@@ -71,12 +70,33 @@
       
       function parallax(els, translate) {
         for(el of Array.from(els)) {
+
           el.style.transform = translate
+          el.style.webkitTransform = translate
+
           el.children[0].style.transform = translate
+          el.children[0].style.webkitTransform = translate
+
           el.children[0].children[0].style.transform = translate
+          el.children[0].children[0].style.webkitTransform = translate
+
           el.children[0].children[0].children[0].style.transform = translate
+          el.children[0].children[0].children[0].style.webkitTransform = translate
+
           el.children[0].children[0].children[0].children[0].style.transform = translate
+          el.children[0].children[0].children[0].children[0].style.webkitTransform = translate
         }
+      }
+
+      if (window.DeviceOrientationEvent) {
+        window.addEventListener('deviceorientation', deviceOrientationHandler, false);
+      }
+
+      function deviceOrientationHandler(e) {
+        const mobileTranslate = `translate(${e.gamma/50}px, ${e.beta/50}px)`
+
+        parallax(els, mobileTranslate)
+        console.log(e.alpha + ' : ' + e.beta + ' : ' + e.gamma)
       }
     })
   </script>
@@ -86,7 +106,7 @@
   <!-- nav and drip graphic -->
   <nav>
     <div class="logo-hamburger">
-      <a class="nav-logo" href="#">
+      <a class="nav-logo" href="index.html">
         <svg viewBox="0 0 531.66 392.97">
           <use xlink:href='static/images/logo/logo.svg#logo'></use>
         </svg>
@@ -99,9 +119,10 @@
     </div>
 
     <ul id="nav-links" class="nav-links">
-      <li><a href="#">SKILLS</a></li>
-      <li><a href="#">PROJECTS</a></li>
-      <li><a href="#">CONTACT</a></li>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="skills.html">SKILLS</a></li>
+      <li><a href="projects.html">PROJECTS</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
     </ul>
   </nav>
   <main id="main">
