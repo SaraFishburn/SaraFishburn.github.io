@@ -17,7 +17,7 @@ main {
 
 .heading {
   grid-area: header;
-  margin-left: 10%;
+  margin-left: 10vw;
   width: fit-content;
   margin-bottom: 30px;
 }

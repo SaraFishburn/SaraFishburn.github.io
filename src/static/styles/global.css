@@ -257,7 +257,7 @@ footer {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 #media-icons::before, #media-icons::after{
@@ -271,9 +271,7 @@ footer {
 #media-icons svg {
   position: relative;
   fill: white;
-  font-size: 2rem;
   opacity: 0.87;
-  font-weight: lighter;
   height: 2rem;
   stroke: var(--dark-2);
 }
@@ -281,4 +279,18 @@ footer {
 #media-icons svg:hover {
   transform: translateY(-5px);
   fill: var(--accent);
+}
+
+#copyright {
+  grid-area: footer;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  margin-bottom: 10px;
+  opacity: 0.6;
+  font-size: 0.6rem;
 }

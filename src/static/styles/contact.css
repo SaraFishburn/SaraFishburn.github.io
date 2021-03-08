@@ -1,0 +1,30 @@
+main {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(6, auto) 500px;
+  grid-template-areas: "top-graphic"
+                       "header"
+                       "form"
+                       "footer";
+  overflow: hidden;
+  position: relative;
+}
+
+.heading {
+  grid-area: header;
+  margin-left: 10vw;
+  width: fit-content;
+  margin-top: 20px;
+}
+
+.heading h1 {
+  color: var(--light-1);
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+
+.heading h2 {
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 100;
+}

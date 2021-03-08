@@ -51,7 +51,7 @@
   <!-- nav and drip graphic -->
   <nav>
     <div class="logo-hamburger">
-      <a class="nav-logo" href="#">
+      <a class="nav-logo" href="index.html">
         <svg viewBox="0 0 531.66 392.97">
           <use xlink:href='static/images/logo/logo.svg#logo'></use>
         </svg>
@@ -94,7 +94,9 @@
     <!-- portfolio -->
     <div class="project" id="portfolio">
       <div class="image-border">
-        <img src="" alt="">
+        <div class="image-wrapper">
+          <img src="static/images/projects/portfolio.png" alt="">
+        </div>
       </div>
       <div class="frame-base">
         <div class="left-stand"></div>
@@ -109,9 +111,8 @@
         <span>Javascript</span>. 
         Made as the eigth project for Harvard's online CS50 - Introduction to 
         Computer Science course.
-        <p>
-          <br>
-          <a href="#">Check it out here</a>
+      </p>
+      <p><a class="link" href="http://sara-fishburn-portfolio.s3-website-ap-southeast-2.amazonaws.com/index.html" target="_blank">Check it out here</a></p>
     </div>
         
     <!-- filter -->
@@ -142,7 +143,9 @@
     <!-- dots -->
     <div class="project" id="dots">
       <div class="image-border">
-        <img src="" alt="">
+        <div class="image-wrapper">
+          <iframe src="https://www.youtube.com/embed/vL1Nv1gWT8U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
       </div>
       <div class="frame-base">
         <div class="left-stand"></div>
@@ -162,6 +165,9 @@
     <!-- project possible -->
     <div class="project" id="possible">
       <div class="image-border">
+        <div class="image-wrapper">
+          <iframe class="project-preview" src="https://scratch.mit.edu/projects/434747043/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+        </div>
         <img src="" alt="">
       </div>
       <div class="frame-base">
@@ -172,7 +178,9 @@
       <h2>- Project Possible -</h2>
       <p>Created for CS50's Problem Set 0.</p>
       <p>
-        An endless runner game built in Scratch which continuosly 
+        An endless runner game built in 
+        <span>Scratch</span>
+        which continuosly 
         increases in speed and randomly generates obstacles. Includes 
         animations for running, jumping, and rolling as well as explosions on collisions with obstacles.
       </p>
@@ -250,6 +258,9 @@
         </svg>
       </a>
     </span>
+
+    <!-- copyright notice -->
+    <small id="copyright" >&copy; Copyright Sara Fishburn, All Rights Reserved.</small>
   </footer>
 </body>
 </html>
