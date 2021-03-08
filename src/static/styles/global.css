@@ -1,3 +1,5 @@
+
+
 :root {
   --accent: #00e9f9;
   --light-1: #e1e3e4;
@@ -48,15 +50,14 @@ nav {
   position: fixed;
   width: 100%;
   flex-direction: column;
-  z-index: 100;
+  z-index: 200;
 }
 
 .logo-hamburger {
   display: flex;
   box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
   background-color: var(--dark-4);
-  z-index: 100;
-
+  z-index: 300;
 }
 
 .nav-logo {
@@ -148,6 +149,7 @@ nav {
 
   transform: translateY(-95%);
   transition: 0.6s;
+  z-index: 150;
 }
 
 .nav-links li {
@@ -166,6 +168,16 @@ nav {
   transform: translateY(0%);
   transition: 1s cubic-bezier(.66,-0.66,.15,1.09);
 }
+
+#nav-socials {
+  position: absolute;
+  width: 100%;
+  top: 85%;
+  margin-left: 0;
+}
+/* the rest of the navbar media icon styling is located with the footer icons */
+
+
 
 /* top drip graphic */
 .drip-top {
@@ -249,7 +261,7 @@ footer {
 }
 
 /* social media icons */
-#media-icons {
+#media-icons, #nav-media-icons{
   grid-area: footer;
   position: absolute;
   bottom: 0;
@@ -260,7 +272,7 @@ footer {
   margin-bottom: 30px;
 }
 
-#media-icons::before, #media-icons::after{
+#media-icons::before, #media-icons::after, #nav-media-icons::before, #nav-media-icons::after {
   content: "";
   height: 1px;
   width: 20%;
@@ -268,7 +280,7 @@ footer {
 }
 
 
-#media-icons svg {
+#media-icons svg, #nav-media-icons svg{
   position: relative;
   fill: white;
   opacity: 0.87;
@@ -276,7 +288,11 @@ footer {
   stroke: var(--dark-2);
 }
 
-#media-icons svg:hover {
+#nav-media-icons svg {
+  stroke: var(--dark-4); 
+}
+
+#media-icons svg:hover, #nav-media-icons svg:hover {
   transform: translateY(-5px);
   fill: var(--accent);
 }

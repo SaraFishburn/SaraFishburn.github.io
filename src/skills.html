@@ -12,10 +12,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon_io/favicon-16x16.png">
   <link rel="manifest" href="static/images/favicon_io/site.webmanifest">
 
-  <!-- font -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
-
   <!-- icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
@@ -23,84 +19,11 @@
   <link rel="stylesheet" href="static/styles/global.css">
   <link rel="stylesheet" href="static/styles/skills.css">
 
+  <!-- javascript -->
+  <script src="static/javascript/global.js"></script>
+  <script src="static/javascript/skills.js"></script>
+
   <title>Sara Fishburn: Skills</title>
-
-  <script>
-    window.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('hamburger').onclick = function() {
-
-        // toggle hamburger animation
-        document.getElementById('ham-top').classList.toggle('ham-top-transition')
-        document.getElementById('ham-middle').classList.toggle('ham-middle-transition')
-        document.getElementById('ham-bottom').classList.toggle('ham-bottom-transition')
-
-        // lock body scrolling
-        var body = document.body
-        if(document.body.style.overflow == 'hidden')
-          document.body.style.overflow = 'visible';
-        
-        // toggle navbar and drip graphic movement
-        document.getElementById('nav-links').classList.toggle('nav-links-show')
-        document.getElementById('drip-top').classList.toggle('drip-top-slide')
-      }
-
-      // parallax animation on mouse movement
-      const main = document.getElementById('main')
-      const html = document.getElementById('html-bubble')
-      const js = document.getElementById('js-bubble')
-      const ruby = document.getElementById('ruby-bubble')
-      const css = document.getElementById('css-bubble')
-      const python = document.getElementById('python-bubble')
-      const flask = document.getElementById('flask-bubble')
-      const c = document.getElementById('c-bubble')
-      const sql = document.getElementById('sql-bubble')
-
-      const els = [html, js, ruby, css, python, flask, c, sql]
-      const dist = 0.005
-
-      // moving animation event
-      document.addEventListener('mousemove', (e) => {
-        const xAxis = window.innerWidth / 2 - e.pageX;
-        const yAxis = window.innerHeight / 2 - e.pageY;
-
-        const translate = `translate3d(${xAxis * dist}px, ${yAxis * dist}px, 0)`
-
-        parallax(els, translate)
-      })
-      
-      function parallax(els, translate) {
-        for(el of Array.from(els)) {
-
-          el.style.transform = translate
-          el.style.webkitTransform = translate
-
-          el.children[0].style.transform = translate
-          el.children[0].style.webkitTransform = translate
-
-          el.children[0].children[0].style.transform = translate
-          el.children[0].children[0].style.webkitTransform = translate
-
-          el.children[0].children[0].children[0].style.transform = translate
-          el.children[0].children[0].children[0].style.webkitTransform = translate
-
-          el.children[0].children[0].children[0].children[0].style.transform = translate
-          el.children[0].children[0].children[0].children[0].style.webkitTransform = translate
-        }
-      }
-
-      if (window.DeviceOrientationEvent) {
-        window.addEventListener('deviceorientation', deviceOrientationHandler, false);
-      }
-
-      function deviceOrientationHandler(e) {
-        const mobileTranslate = `translate(${e.gamma/50}px, ${e.beta/50}px)`
-
-        parallax(els, mobileTranslate)
-        console.log(e.alpha + ' : ' + e.beta + ' : ' + e.gamma)
-      }
-    })
-  </script>
-
 </head>
 <body>
   <!-- nav and drip graphic -->
@@ -123,6 +46,25 @@
       <li><a href="skills.html">SKILLS</a></li>
       <li><a href="projects.html">PROJECTS</a></li>
       <li><a href="contact.html">CONTACT</a></li>
+      <li id="nav-socials">
+        <span id="nav-media-icons">
+          <a href="https://github.com/SaraFishburn" target="_blank"> 
+            <svg viewBox="0 0 24 24">
+              <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href='static/images/icons/linkedin-line.svg#linkedin-line'></use>
+            </svg>
+          </a>
+          <a href="https://twitter.com/FishburnSara" target="_blank">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href='static/images/icons/twitter-line.svg#twitter-line'></use>
+            </svg>
+          </a>
+        </span>
+      </li>
     </ul>
   </nav>
   <main id="main">

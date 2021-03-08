@@ -12,10 +12,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon_io/favicon-16x16.png">
   <link rel="manifest" href="static/images/favicon_io/site.webmanifest">
 
-  <!-- font -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
-
   <!-- icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
@@ -23,29 +19,11 @@
   <link rel="stylesheet" href="static/styles/global.css">
   <link rel="stylesheet" href="static/styles/contact.css">
 
+  <!-- javascript -->
+  <script src="static/javascript/global.js"></script>
+  <script src="static/javascript/contact.js"></script>
+
   <title>Sara Fishburn: Contact</title>
-
-  <script>
-    window.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('hamburger').onclick = function() {
-
-        // toggle hamburger animation
-        document.getElementById('ham-top').classList.toggle('ham-top-transition')
-        document.getElementById('ham-middle').classList.toggle('ham-middle-transition')
-        document.getElementById('ham-bottom').classList.toggle('ham-bottom-transition')
-
-        // lock body scrolling
-        var body = document.body
-        if(document.body.style.overflow == 'hidden')
-          document.body.style.overflow = 'visible';
-        
-        // toggle navbar and drip graphic movement
-        document.getElementById('nav-links').classList.toggle('nav-links-show')
-        document.getElementById('drip-top').classList.toggle('drip-top-slide')
-      }
-    })
-  </script>
-
 </head>
 <body>
   <!-- nav and drip graphic -->
@@ -68,6 +46,25 @@
       <li><a href="skills.html">SKILLS</a></li>
       <li><a href="projects.html">PROJECTS</a></li>
       <li><a href="contact.html">CONTACT</a></li>
+      <li id="nav-socials">
+        <span id="nav-media-icons">
+          <a href="https://github.com/SaraFishburn" target="_blank"> 
+            <svg viewBox="0 0 24 24">
+              <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href='static/images/icons/linkedin-line.svg#linkedin-line'></use>
+            </svg>
+          </a>
+          <a href="https://twitter.com/FishburnSara" target="_blank">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href='static/images/icons/twitter-line.svg#twitter-line'></use>
+            </svg>
+          </a>
+        </span>
+      </li>
     </ul>
   </nav>
   <main>
@@ -94,30 +91,34 @@
     
     <!-- form that is linked to a google form-->
     <form action="https://docs.google.com/forms/d/e/1FAIpQLSc_RoZMRq8d4IIvABaFx-oLKMHUiqP88MtbsrUAsZEgNlzFig/formResponse" method="post" target="hidden_iframe" name="form" onsubmit="submitted = validateForm(); return submitted">
+        
         <div class="container">
             <div class="material-textfield">
                 <input type="email" class="text-field" name="entry.1777739869" id="email" placeholder=" ">
                 <label class="input-label" for="email">Email</label>
             </div>
+            <div class="empty-field" id="emailText"></div>
         </div>
-        <div class="empty-field" id="emailText"></div>
+
         <div class="container">
             <div class="material-textfield">
-                <textarea class="text-field name-field" name="entry.252200460" maxlength="70" id="name" rows="1" placeholder=" "></textarea>
-                <label class="input-label" for="name">Name</label>
+              <textarea class="text-field name-field" name="entry.252200460" maxlength="70" id="name" rows="1" placeholder=" "></textarea>
+              <label class="input-label" for="name">Name</label>
             </div>
+            <div class="empty-field" id="nameText"></div>
         </div>
-        <div class="empty-field" id="nameText"></div>
+        
         <div class="container">
             <div class="material-textfield">
                 <textarea class="text-field message-field" name="entry.1506996381" maxlength="280" id="message" rows="3" placeholder=" "></textarea>
                 <label class="input-label" for="message">Message</label>
             </div>
+            <div class="empty-field" id="messageText"></div>
         </div>
-        <div class="empty-field" id="messageText"></div>
+        
         <div class="sent-div">
             <div class="dp-6 sent-banner" id="sent-banner"><h6 class="primary-text sent-message" id="sent-message">Message sent, thank you!</h6></div>
-            <div class="btn-div"><button type="submit" class="btn btn-light" id="send-button">Send</button></div>
+            <button type="submit" id="send-button">Send</button>
         </div>
     </form>
 

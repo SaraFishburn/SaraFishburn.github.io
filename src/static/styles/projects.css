@@ -1,7 +1,7 @@
 main {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(7, auto) 350px;
+  grid-template-rows: repeat(7, auto) 75vw;
   grid-template-areas: "top-graphic"
                        "header"
                        "folio"

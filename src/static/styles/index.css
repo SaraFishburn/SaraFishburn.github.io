@@ -1,7 +1,7 @@
 main {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto auto auto auto 300px;
+  grid-template-rows: auto auto auto auto 75vw;
   grid-template-areas: "top-graphic"
                        "header"
                        "pic"
@@ -113,5 +113,3 @@ article span {
   color: var(--accent);
   opacity: 0.8;
 }
-
-
