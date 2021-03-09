@@ -63,7 +63,7 @@ main {
   left: 0;
 }
 
-.project span {
+.project span, .project small{
   color: var(--accent);
   opacity: 0.8;
 }
