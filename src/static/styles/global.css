@@ -288,6 +288,10 @@ footer {
   stroke: var(--dark-2);
 }
 
+#nav-media-icons {
+  margin-bottom: 70px;
+}
+
 #nav-media-icons svg {
   stroke: var(--dark-4); 
 }
