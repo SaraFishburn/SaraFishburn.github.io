@@ -56,7 +56,7 @@ h1, h2, h3, h4, a, article {
 section {
   margin-bottom: 80px;
   margin-left: 10vw;
-  width: 70vw;
+  width: 80vw;
 }
 
 .topic {
@@ -67,11 +67,21 @@ section {
   display: flex;
 }
 
+.chunk:hover .text {
+  background-color: #ffffff0e;
+  border-radius: 15px;
+}
+
+.chunk:hover .circle {
+  background-color: var(--accent);
+  opacity: 0.6;
+}
+
 .circle-line {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 .topic .circle-line {
@@ -101,6 +111,15 @@ section {
 
 .topic .line {
   height: calc(100% - 20px);
+}
+
+.last-line {
+  height: calc(100% - 80px);
+}
+
+.text {
+  padding: 0 10px;
+  transition: 0.5s;
 }
 
 section h1 {

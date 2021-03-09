@@ -1,3 +1,18 @@
+@keyframes float {
+	0% {
+		box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.20);
+		transform: translatey(-5px);
+	}
+	100% {
+		box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+		transform: translatey(0px);
+	}
+}
+
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -78,8 +93,6 @@ main {
   --circle-width: 47vw;
   grid-area: html;
   left: 10%;
-  /* transition: 0.1s linear; */
-  
 }
 
 #js-bubble {
@@ -87,49 +100,48 @@ main {
   grid-area: js;
   left: -5%;
   top: -5%;
-  /* transition: 0.2s linear; */
 }
+
 #ruby-bubble {
   --circle-width: 39vw;
   grid-area: ruby;
   top: 10%;
-  /* transition: 0.1s linear; */
 }
+
 #css-bubble {
   --circle-width: 42vw;
   grid-area: css;
   left: -5%;
   top: -15%;
-  /* transition: 0.2s linear; */
 }
+
 #python-bubble {
   --circle-width: 68vw;
   grid-area: python;
   left: 8%;
   top: 5%;
-  /* transition: 0.2s linear; */
 }
+
 #flask-bubble {
   --circle-width: 31vw;
   grid-area: flask;
   left: -5%;
   top: -10%;
-  /* transition: 0.1s linear; */
 }
+
 #c-bubble {
   --circle-width: 43vw;
   grid-area: c;
   left: -5%;
   top: 25%;
-  /* transition: 0.1s linear; */
 }
+
 #sql-bubble {
   --circle-width: 30vw;
   grid-area: sql;
   padding-bottom: 10%;
   left: 10%;
   top: 10%;
-  /* transition: 0.2s linear; */
 }
 
 .top-circle svg {
