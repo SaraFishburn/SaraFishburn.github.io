@@ -10,6 +10,10 @@
   --dark-4: #092138;
 }
 
+html {
+  background-color: var(--dark-4);
+}
+
 a {
   text-decoration: none;
   color: inherit;
