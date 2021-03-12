@@ -17,12 +17,15 @@
 
   <!-- style sheets -->
   <link rel="stylesheet" href="static/styles/global.css">
+  <link rel="stylesheet" href="static/styles/global-tablet.css">
+  <link rel="stylesheet" href="static/styles/global-desktop.css">
+
   <link rel="stylesheet" href="static/styles/projects.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+  <link rel="stylesheet" href="static/styles/projects-tablet.css">
+  <link rel="stylesheet" href="static/styles/projects-desktop.css">
 
   <!-- javascript -->
   <script src="static/javascript/global.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 
   <title>Sara Fishburn: Projects</title>
 
@@ -31,7 +34,7 @@
   <!-- nav and drip graphic -->
   <nav>
     <div class="logo-hamburger">
-      <a class="nav-logo" href="index.html">
+      <a class="nav-logo" href="../index.html">
         <svg viewBox="0 0 531.66 392.97">
           <use xlink:href='static/images/logo/logo.svg#logo'></use>
         </svg>
@@ -43,10 +46,10 @@
       </div>
     </div>
 
-    <ul id="nav-links" class="nav-links">
+    <ul id="nav-links">
       <li><a href="../index.html">HOME</a></li>
       <li><a href="skills.html">SKILLS</a></li>
-      <li><a href="projects.html">PROJECTS</a></li>
+      <li><a id="active" href="projects.html">PROJECTS</a></li>
       <li><a href="resume.html">RESUME</a></li>
       <li><a href="contact.html">CONTACT</a></li>
       <li id="nav-socials">
@@ -87,23 +90,26 @@
     </div>
 
     <!-- heading -->
-    <section class="heading">
+    <section id="heading">
       <h1>PROJECTS</h1>
     </section>
 
     <!-- portfolio -->
-    <div class="project" id="portfolio">
-      <div class="image-border">
-        <div class="image-wrapper">
-          <img src="static/images/projects/portfolio.png" alt="">
+    <section class="project" id="portfolio">
+      <div class="monitor">
+        <div class="image-border">
+          <div class="image-wrapper">
+            <img src="static/images/projects/portfolio.png" alt="">
+          </div>
+        </div>
+        <div class="frame-base">
+          <div class="left-stand"></div>
+          <div class="bottom-stand"></div>
+          <div class="right-stand"></div>
         </div>
       </div>
-      <div class="frame-base">
-        <div class="left-stand"></div>
-        <div class="bottom-stand"></div>
-        <div class="right-stand"></div>
-      </div>
       <h2>- Old Portfolio -</h2>
+      <time datetime="2020-10-11">October 11, 2020</time>
       <p>
         My first portfolio website. Written in 
         <span>HTML</span>, 
@@ -112,20 +118,23 @@
         Made as the eigth project for Harvard's online CS50 - Introduction to 
         Computer Science course.
       </p>
-      <p><a class="link" href="http://sara-fishburn-portfolio.s3-website-ap-southeast-2.amazonaws.com/index.html" target="_blank">Check it out here</a></p>
-    </div>
+      <p><a class="link link-underline" href="http://sara-fishburn-portfolio.s3-website-ap-southeast-2.amazonaws.com/index.html" target="_blank">Check it out here</a></p>
+    </section>
         
     <!-- filter -->
-    <div class="project" id="filter">
-      <div class="image-border">
-    
-      </div>
-      <div class="frame-base">
-        <div class="left-stand"></div>
-        <div class="bottom-stand"></div>
-        <div class="right-stand"></div>
+    <section class="project" id="filter">
+      <div class="monitor">
+        <div class="image-border">
+      
+        </div>
+        <div class="frame-base">
+          <div class="left-stand"></div>
+          <div class="bottom-stand"></div>
+          <div class="right-stand"></div>
+        </div>
       </div>
       <h2>- Filter -</h2>
+      <time datetime="2020-07-31">July 31, 2020</time>
       <p>Created for CS50's Problem Set 4.</p>
       <p>
         Built in 
@@ -138,21 +147,24 @@
           <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
         </svg>
       </a> 
-    </div>
+    </section>
         
     <!-- dots -->
-    <div class="project" id="dots">
-      <div class="image-border">
-        <div class="image-wrapper">
-          <iframe src="https://www.youtube.com/embed/vL1Nv1gWT8U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+    <section class="project" id="dots">
+      <div class="monitor">
+        <div class="image-border">
+          <div class="image-wrapper">
+            <iframe src="https://www.youtube.com/embed/vL1Nv1gWT8U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          </div>
+        </div>
+        <div class="frame-base">
+          <div class="left-stand"></div>
+          <div class="bottom-stand"></div>
+          <div class="right-stand"></div>
         </div>
       </div>
-      <div class="frame-base">
-        <div class="left-stand"></div>
-        <div class="bottom-stand"></div>
-        <div class="right-stand"></div>
-      </div>
       <h2>- Dots -</h2>
+      <time datetime="2020-10-10">October 2017</time>
       <p>University of Queensland's CSSE1001 Assignment 3 2017.</p>
       <p>
         A simple tile matching puzzle game built in 
@@ -160,22 +172,25 @@
         which includes different game modes and special tiles 
         that cause effects when activated.
       </p>
-    </div>
+    </section>
     
     <!-- project possible -->
-    <div class="project" id="possible">
-      <div class="image-border">
-        <div class="image-wrapper">
-          <iframe class="project-preview" src="https://scratch.mit.edu/projects/434747043/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+    <section class="project" id="possible">
+      <div class="monitor">
+        <div class="image-border">
+          <div class="image-wrapper">
+            <iframe class="project-preview" src="https://scratch.mit.edu/projects/434747043/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+          </div>
+          <img src="" alt="">
         </div>
-        <img src="" alt="">
-      </div>
-      <div class="frame-base">
-        <div class="left-stand"></div>
-        <div class="bottom-stand"></div>
-        <div class="right-stand"></div>
+        <div class="frame-base">
+          <div class="left-stand"></div>
+          <div class="bottom-stand"></div>
+          <div class="right-stand"></div>
+        </div>
       </div>
       <h2>- Project Possible -</h2>
+      <time datetime="2020-10-10">July 2020</time>
       <p>Created for CS50's Problem Set 0.</p>
       <p>
         An endless runner game built in 
@@ -186,23 +201,24 @@
       </p>
       <p>Press space to jump and down arrow to roll.</p>
       <small>*note: Sorry! scratch games cant be played on mobile :(</small>
-      
-    </div>
+    </section>
     
     <!-- flossily -->
-    <div class="project" id="flossily">
-      <div class="image-border">
-        <img src="" alt="">
-      </div>
-      <div class="frame-base">
-        <div class="left-stand"></div>
-        <div class="bottom-stand"></div>
-        <div class="right-stand"></div>
+    <section class="project" id="flossily">
+      <div class="monitor">
+        <div class="image-border">
+          <img src="" alt="">
+        </div>
+        <div class="frame-base">
+          <div class="left-stand"></div>
+          <div class="bottom-stand"></div>
+          <div class="right-stand"></div>
+        </div>
       </div>
       <h2>- Flossily -</h2>
+      <time datetime="2020-12-01">Started December 2020</time>
       <p>
         Flossily is an embroidery floss organisation website written in 
-        
         <span>Python</span> with 
         <span>Flask</span>,
         <span>Javascript</span>,
@@ -218,29 +234,8 @@
           <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
         </svg>
       </a>
-    </div>
+    </section>
 
-
-    
-  </main>
-  
-  <!-- footer -->
-  <footer>
-     <!-- drip bottom -->
-     <div class="drip-bottom">
-      <svg viewBox="0 0 1000 564.55">
-        <use xlink:href='static/images/drip.svg#drip'></use>
-      </svg>
-
-      <svg viewBox="0 0 1000 564.55">
-        <use xlink:href='static/images/drip.svg#drip'></use>
-      </svg>
-
-      <svg viewBox="0 0 1000 564.55">
-        <use xlink:href='static/images/drip.svg#drip'></use>
-      </svg>
-    </div> 
-    
     <!-- social media icons -->
     <span id="media-icons">
       <a href="https://github.com/SaraFishburn" target="_blank"> 
@@ -259,6 +254,25 @@
         </svg>
       </a>
     </span>
+
+  </main>
+  
+  <!-- footer -->
+  <footer>
+     <!-- drip bottom -->
+     <div id="drip-bottom">
+      <svg viewBox="0 0 1000 564.55">
+        <use xlink:href='static/images/drip.svg#drip'></use>
+      </svg>
+
+      <svg viewBox="0 0 1000 564.55">
+        <use xlink:href='static/images/drip.svg#drip'></use>
+      </svg>
+
+      <svg viewBox="0 0 1000 564.55">
+        <use xlink:href='static/images/drip.svg#drip'></use>
+      </svg>
+    </div> 
 
     <!-- copyright notice -->
     <small id="copyright" >&copy; Copyright Sara Fishburn, All Rights Reserved.</small>

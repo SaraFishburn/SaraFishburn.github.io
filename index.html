@@ -17,7 +17,12 @@
 
   <!-- style sheets -->
   <link rel="stylesheet" href="src/static/styles/global.css">
+  <link rel="stylesheet" href="src/static/styles/global-tablet.css">
+  <link rel="stylesheet" href="src/static/styles/global-desktop.css">
+  
   <link rel="stylesheet" href="src/static/styles/index.css">
+  <link rel="stylesheet" href="src/static/styles/index-tablet.css">
+  <link rel="stylesheet" href="src/static/styles/index-desktop.css">
 
   <!-- javascript -->
   <script src="src/static/javascript/global.js"></script>
@@ -40,8 +45,8 @@
         <div id="ham-bottom"></div>
       </div>
     </div>
-    <ul id="nav-links" class="nav-links">
-      <li><a href="index.html">HOME</a></li>
+    <ul id="nav-links">
+      <li><a id="active" href="index.html">HOME</a></li>
       <li><a href="src/skills.html">SKILLS</a></li>
       <li><a href="src/projects.html">PROJECTS</a></li>
       <li><a href="src/resume.html">RESUME</a></li>
@@ -69,7 +74,7 @@
   </nav>
   <main>
     <!-- drip top -->
-    <div id="drip-top" class="drip-top">
+    <div id="drip-top">
       <svg viewBox="0 0 1000 564.55">
         <use xlink:href='src/static/images/drip.svg#drip'></use>
       </svg>
@@ -84,7 +89,7 @@
     </div>
 
     <!-- heading -->
-    <section class="heading">
+    <section id="heading">
       <h2>Hello, my name is</h2>
       <h1>Sara Fishburn</h1>
       <h3>I'm an aspiring web developer</h3>
@@ -104,13 +109,14 @@
     <article>
       <p>
         Hi there! I'm a current fast-track 
-        <a href="https://coderacademy.edu.au/" target="_blank">Coder Academy</a> 
+        <a class="link-underline" href="https://coderacademy.edu.au/" target="_blank">Coder Academy</a> 
         student from Brisbane, Australia. I'm studying a 
         <span>Diploma of Information Technology</span>
         to one day become a 
         <span>full stack dev</span>
         and help create amazing websites. 
       </p>
+      <br>
       <p>
         When I'm not learning as much as I can about programming, 
         you can find me at my 
@@ -122,26 +128,6 @@
       </p>
     </article>
 
-    
-  </main>
-  
-  <!-- footer -->
-  <footer>
-     <!-- drip bottom -->
-     <div class="drip-bottom">
-      <svg viewBox="0 0 1000 564.55">
-        <use xlink:href='src/static/images/drip.svg#drip'></use>
-      </svg>
-
-      <svg viewBox="0 0 1000 564.55">
-        <use xlink:href='src/static/images/drip.svg#drip'></use>
-      </svg>
-
-      <svg viewBox="0 0 1000 564.55">
-        <use xlink:href='src/static/images/drip.svg#drip'></use>
-      </svg>
-    </div> 
-    
     <!-- social media icons -->
     <span id="media-icons">
       <a href="https://github.com/SaraFishburn" target="_blank"> 
@@ -160,6 +146,25 @@
         </svg>
       </a>
     </span>
+
+  </main>
+  
+  <!-- footer -->
+  <footer>
+     <!-- drip bottom -->
+     <div id="drip-bottom">
+      <svg viewBox="0 0 1000 564.55">
+        <use xlink:href='src/static/images/drip.svg#drip'></use>
+      </svg>
+
+      <svg viewBox="0 0 1000 564.55">
+        <use xlink:href='src/static/images/drip.svg#drip'></use>
+      </svg>
+
+      <svg viewBox="0 0 1000 564.55">
+        <use xlink:href='src/static/images/drip.svg#drip'></use>
+      </svg>
+    </div> 
 
     <!-- copyright notice -->
     <small id="copyright" >&copy; Copyright Sara Fishburn, All Rights Reserved.</small>

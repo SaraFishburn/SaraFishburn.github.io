@@ -1,55 +1,24 @@
-@keyframes float {
-	0% {
-		box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.20);
-		transform: translatey(-5px);
-	}
-	100% {
-		box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
-		transform: translatey(0px);
-	}
-}
-
 main {
-  display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(7, auto) 5px;
+  grid-template-rows: repeat(7, auto) 80vw;
   grid-template-areas: "top-graphic top-graphic"
                        "header header"
                        "html js"
                        "ruby css"
                        "python python"
                        "flask c"
-                       "sql empty1"
+                       "sql scratch"
                        "footer footer";
-
-  overflow: hidden;
-  position: relative;
 }
 
-.heading {
-  grid-area: header;
-  margin-left: 10vw;
-  width: fit-content;
-  margin-bottom: 30px;
-}
-
-.heading h2 {
-  color: var(--accent);
+#heading h2 {
   font-size: 0.8rem;
-  font-weight: 100;
-}
-
-.heading h1 {
-  color: var(--light-1);
-  font-size: 2.8rem;
-  font-weight: 400;
 }
 
 .skill-bubble {
+  /* circle width defined for individual bubbles below */
+  --middle-circle-size: calc(var(--circle-width) * 0.85);
+  --top-circle-size: calc(var(--circle-width) * 0.65);
   display: flex;
   align-items: center;
   position: relative;
@@ -62,31 +31,29 @@ main {
 .skill-bubble div {
   position: relative;
   margin: auto;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+  box-shadow: var(--box-dp4)
 }
 
 .bottom-circle {
   background-color: var(--dark-4);
   width: var(--circle-width);
   height: var(--circle-width);
-  border-radius: 50%;
 }
 
 .middle-circle {
   background-color: var(--dark-3);
-  width: calc(var(--circle-width) * 0.85);
-  height: calc(var(--circle-width) * 0.85);
-  border-radius: 50%;
+  width: var(--middle-circle-size);
+  height: var(--middle-circle-size);
 }
 
 .top-circle {
   background-color: var(--dark-2);
-  width: calc(var(--circle-width) * 0.65);
-  height: calc(var(--circle-width) * 0.65);
-  border-radius: 50%;
+  width: var(--top-circle-size);
+  height: var(--top-circle-size);
 }
 
 #html-bubble {
@@ -148,6 +115,8 @@ main {
   position: absolute;
 }
 
+/* logos scaled depending on their proportions  */
+
 #html {
   height: calc(var(--circle-width) * 0.7);
 }
@@ -181,12 +150,12 @@ main {
 }
 
 #scratch {
-  grid-area: footer;
+  grid-area: scratch;
   position: relative;
   display: flex;
   justify-content: flex-end;
   overflow: hidden;
-  padding-bottom: 50%;
+  transform: translateY(60%);
 }
 
 #scratch svg {

@@ -17,7 +17,12 @@
 
   <!-- style sheets -->
   <link rel="stylesheet" href="static/styles/global.css">
+  <link rel="stylesheet" href="static/styles/global-tablet.css">
+  <link rel="stylesheet" href="static/styles/global-desktop.css">
+  
   <link rel="stylesheet" href="static/styles/resume.css">
+  <link rel="stylesheet" href="static/styles/resume-tablet.css">
+  <link rel="stylesheet" href="static/styles/resume-desktop.css">
 
   <!-- javascript -->
   <script src="static/javascript/global.js"></script>
@@ -29,7 +34,7 @@
   <!-- nav and drip graphic -->
   <nav>
     <div class="logo-hamburger">
-      <a class="nav-logo" href="index.html">
+      <a class="nav-logo" href="../index.html">
         <svg viewBox="0 0 531.66 392.97">
           <use xlink:href='static/images/logo/logo.svg#logo'></use>
         </svg>
@@ -40,11 +45,11 @@
         <div id="ham-bottom"></div>
       </div>
     </div>
-    <ul id="nav-links" class="nav-links">
+    <ul id="nav-links">
       <li><a href="../index.html">HOME</a></li>
       <li><a href="skills.html">SKILLS</a></li>
       <li><a href="projects.html">PROJECTS</a></li>
-      <li><a href="resume.html">RESUME</a></li>
+      <li><a id="active" href="resume.html">RESUME</a></li>
       <li><a href="contact.html">CONTACT</a></li>
       <li id="nav-socials">
         <span id="nav-media-icons">
@@ -84,151 +89,132 @@
     </div>
 
     <!-- heading -->
-    <section class="heading">
+    <section id="heading">
       <h1>RESUME</h1>
     </section>
 
     <!-- resume link -->
-    <a id="resume-link" href="#">View full resume pdf here</a>
+    <a id="resume-link" class="link-underline" href="#">View full resume pdf here</a>
 
-    <!-- education -->
-    <section>
-      <div class="topic">
-        <div class="circle-line">
-          <div class="small-blue-circle"></div>
-          <div class="line"></div>
+    <div id="content">
+      <!-- education -->
+      <section>
+        <div class="topic">
+          <div class="circle-line">
+            <div class="small-blue-circle"></div>
+            <div class="line"></div>
+          </div>
+          <h1>Education</h1>
         </div>
-        <h1>Education</h1>
-      </div>
-
-      <!-- coder academy -->
-      <div class="chunk">
-        <div class="circle-line">
-          <div class="circle"></div>
-          <div class="line"></div>
-        </div>
-        <div class="text">
-          <h2>Coder Academy</h2>
-          <h3>Diploma of Information Technology</h3>
-          <h4>Feb 2021 - Present</h4>
-          <article>
-            Current fast track student at Brisbane campus. 
-            Learning HTML, CSS, Ruby on Rails, React, Javascript, Mongo DB, Express, Node JS and more.
-          </article>
-        </div>
-      </div>
-
-      <!-- university -->
-      <div class="chunk">
-        <div class="circle-line">
-          <div class="circle"></div>
-          <div class="line last-line"></div>
-          <div class="small-blue-circle"></div>
-        </div>
-        <div class="text">
-          <h2>University of Queensland</h2>
-          <h3>Bachelor of Civil Engineering (honours)</h3>
-          <h4>Feb 2017 - Dec 2018</h4>
-          <article>
-            Incomplete degree. Skills gained include leadership, 
-            teamwork, and problem solving as well as a sound knowledge of 
-            discrete math and a base level understanding of the Python programming language.
-          </article>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- employemnt -->
-    <section>
-      <div class="topic">
-        <div class="circle-line">
-          <div class="small-blue-circle"></div>
-          <div class="line"></div>
-        </div>
-        <h1>Employment</h1>
-      </div>
-
-      <!-- max employment -->
-      <div class="chunk">
-        <div class="circle-line">
-          <div class="circle"></div>
-          <div class="line"></div>
-        </div>
-        <div class="text">
-          <h2>Max Employment</h2>
-          <h3>Customer Service Team</h3>
-          <h4>Dec 2018 - Dec 2020</h4>
-          <article>
-            Employed within the call center. 
-            Skills gained include time management, 
-            leadership, and communication skills. 
-            Responsible for training new staff.
-            From April 2020 until resignation, 
-            more than 50% of work was conducted from home due to covid 19.
-          </article>
-        </div>
-      </div>
-
-      <!-- CAP security -->
-      <div class="chunk">
-        <div class="circle-line">
-          <div class="circle"></div>
-          <div class="line"></div>
-        </div>
-        <div class="text">
-          <h2>CAP Security Services</h2>
-          <h3>Communication</h3>
-          <h4>Jan 2017 - Present</h4>
-          <article>
-            Casually Employed. Coordination of security guards via radio. 
-            Ability to work under pressure, conflict resolution skills, 
-            communication, problem solving, leadership, and teamwork.
-          </article>
-        </div>
-      </div>
-
-      <!-- woolworths -->
-      <div class="chunk">
-        <div class="circle-line">
-          <div class="circle"></div>
-          <div class="line last-line"></div>
-          <div class="small-blue-circle"></div>
-        </div>
-        <div class="text">
-          <h2>Woolworths</h2>
-          <h3>Deli team member</h3>
-          <h4>Jun 2016 - Jan 2019</h4>
-          <article>
-            Predominantly customer service and food safety. 
-            Ability to follow guidelines, policies, and procedures.
-          </article>
-        </div>
-      </div>
-
-    </section>
-
-
-    
-  </main>
   
-  <!-- footer -->
-  <footer>
-     <!-- drip bottom -->
-     <div class="drip-bottom">
-      <svg viewBox="0 0 1000 564.55">
-        <use xlink:href='static/images/drip.svg#drip'></use>
-      </svg>
+        <!-- coder academy -->
+        <div class="chunk">
+          <div class="circle-line">
+            <div class="circle"></div>
+            <div class="line"></div>
+          </div>
+          <div class="text">
+            <h2>Coder Academy</h2>
+            <h3>Diploma of Information Technology</h3>
+            <h4>Feb 2021 - Present</h4>
+            <article>
+              Current fast track student at Brisbane campus. 
+              Learning HTML, CSS, Ruby on Rails, React, Javascript, Mongo DB, Express, Node JS and more.
+            </article>
+          </div>
+        </div>
+  
+        <!-- university -->
+        <div class="chunk">
+          <div class="circle-line">
+            <div class="circle"></div>
+            <div class="line last-line"></div>
+            <div class="small-blue-circle"></div>
+          </div>
+          <div class="text">
+            <h2>University of Queensland</h2>
+            <h3>Bachelor of Civil Engineering (honours)</h3>
+            <h4>Feb 2017 - Dec 2018</h4>
+            <article>
+              Incomplete degree. Skills gained include leadership, 
+              teamwork, and problem solving as well as a sound knowledge of 
+              discrete math and a base level understanding of the Python programming language.
+            </article>
+          </div>
+        </div>
+  
+      </section>
+  
+      <!-- employemnt -->
+      <section>
+        <div class="topic">
+          <div class="circle-line">
+            <div class="small-blue-circle"></div>
+            <div class="line"></div>
+          </div>
+          <h1>Employment</h1>
+        </div>
+  
+        <!-- max employment -->
+        <div class="chunk">
+          <div class="circle-line">
+            <div class="circle"></div>
+            <div class="line"></div>
+          </div>
+          <div class="text">
+            <h2>Max Employment</h2>
+            <h3>Customer Service Team</h3>
+            <h4>Dec 2018 - Dec 2020</h4>
+            <article>
+              Employed within the call center. 
+              Skills gained include time management, 
+              leadership, and communication skills. 
+              Responsible for training new staff.
+              From April 2020 until resignation, 
+              more than 50% of work was conducted from home due to covid 19.
+            </article>
+          </div>
+        </div>
+  
+        <!-- CAP security -->
+        <div class="chunk">
+          <div class="circle-line">
+            <div class="circle"></div>
+            <div class="line"></div>
+          </div>
+          <div class="text">
+            <h2>CAP Security Services</h2>
+            <h3>Communication</h3>
+            <h4>Jan 2017 - Present</h4>
+            <article>
+              Casually Employed. Coordination of security guards via radio. 
+              Ability to work under pressure, conflict resolution skills, 
+              communication, problem solving, leadership, and teamwork.
+            </article>
+          </div>
+        </div>
+  
+        <!-- woolworths -->
+        <div class="chunk">
+          <div class="circle-line">
+            <div class="circle"></div>
+            <div class="line last-line"></div>
+            <div class="small-blue-circle"></div>
+          </div>
+          <div class="text">
+            <h2>Woolworths</h2>
+            <h3>Deli team member</h3>
+            <h4>Jun 2016 - Jan 2019</h4>
+            <article>
+              Predominantly customer service and food safety. 
+              Ability to follow guidelines, policies, and procedures.
+            </article>
+          </div>
+        </div>
+  
+      </section>
+    </div>
 
-      <svg viewBox="0 0 1000 564.55">
-        <use xlink:href='static/images/drip.svg#drip'></use>
-      </svg>
-
-      <svg viewBox="0 0 1000 564.55">
-        <use xlink:href='static/images/drip.svg#drip'></use>
-      </svg>
-    </div> 
-    
     <!-- social media icons -->
     <span id="media-icons">
       <a href="https://github.com/SaraFishburn" target="_blank"> 
@@ -247,6 +233,24 @@
         </svg>
       </a>
     </span>
+  </main>
+  
+  <!-- footer -->
+  <footer>
+     <!-- drip bottom -->
+     <div id="drip-bottom">
+      <svg viewBox="0 0 1000 564.55">
+        <use xlink:href='static/images/drip.svg#drip'></use>
+      </svg>
+
+      <svg viewBox="0 0 1000 564.55">
+        <use xlink:href='static/images/drip.svg#drip'></use>
+      </svg>
+
+      <svg viewBox="0 0 1000 564.55">
+        <use xlink:href='static/images/drip.svg#drip'></use>
+      </svg>
+    </div>
 
     <!-- copyright notice -->
     <small id="copyright" >&copy; Copyright Sara Fishburn, All Rights Reserved.</small>

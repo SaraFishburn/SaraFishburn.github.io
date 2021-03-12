@@ -17,7 +17,13 @@
 
   <!-- style sheets -->
   <link rel="stylesheet" href="static/styles/global.css">
+  <link rel="stylesheet" href="static/styles/global-tablet.css">
+  <link rel="stylesheet" href="static/styles/global-desktop.css">
+
   <link rel="stylesheet" href="static/styles/skills.css">
+  <link rel="stylesheet" href="static/styles/skills-tablet.css">
+  <link rel="stylesheet" href="static/styles/skills-desktop.css">
+  
 
   <!-- javascript -->
   <script src="static/javascript/global.js"></script>
@@ -29,7 +35,7 @@
   <!-- nav and drip graphic -->
   <nav>
     <div class="logo-hamburger">
-      <a class="nav-logo" href="index.html">
+      <a class="nav-logo" href="../index.html">
         <svg viewBox="0 0 531.66 392.97">
           <use xlink:href='static/images/logo/logo.svg#logo'></use>
         </svg>
@@ -41,9 +47,9 @@
       </div>
     </div>
 
-    <ul id="nav-links" class="nav-links">
+    <ul id="nav-links">
       <li><a href="../index.html">HOME</a></li>
-      <li><a href="skills.html">SKILLS</a></li>
+      <li><a id="active" href="skills.html">SKILLS</a></li>
       <li><a href="projects.html">PROJECTS</a></li>
       <li><a href="resume.html">RESUME</a></li>
       <li><a href="contact.html">CONTACT</a></li>
@@ -70,7 +76,7 @@
   </nav>
   <main id="main">
     <!-- drip top -->
-    <div id="drip-top" class="drip-top">
+    <div id="drip-top">
       <svg viewBox="0 0 1000 564.55">
         <use xlink:href='static/images/drip.svg#drip'></use>
       </svg>
@@ -85,7 +91,7 @@
     </div>
 
     <!-- heading -->
-    <section class="heading">
+    <section id="heading">
       <h1>SKILLS</h1>
       <h2>(to pay the bill$)</h2>
     </section>
@@ -187,18 +193,39 @@
           </div>
         </div>
       </div>
-    </main>
 
-    <!-- footer -->
-    <footer>
       <!-- peeking scratch cat -->
       <div id="scratch">
         <svg viewBox="0 0 234 250">
           <use xlink:href='static/images/skills-logos/scratch.svg#scratch'></use>
         </svg>
       </div>
+
+       <!-- social media icons -->
+      <span id="media-icons">
+        <a href="https://github.com/SaraFishburn" target="_blank"> 
+          <svg viewBox="0 0 24 24">
+            <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank">
+          <svg viewBox="0 0 24 24">
+            <use xlink:href='static/images/icons/linkedin-line.svg#linkedin-line'></use>
+          </svg>
+        </a>
+        <a href="https://twitter.com/FishburnSara" target="_blank">
+          <svg viewBox="0 0 24 24">
+            <use xlink:href='static/images/icons/twitter-line.svg#twitter-line'></use>
+          </svg>
+        </a>
+      </span>
+    
+    </main>
+
+    <!-- footer -->
+    <footer>
       <!-- drip bottom -->
-     <div class="drip-bottom">
+     <div id="drip-bottom">
       <svg viewBox="0 0 1000 564.55">
         <use xlink:href='static/images/drip.svg#drip'></use>
       </svg>
@@ -211,25 +238,6 @@
         <use xlink:href='static/images/drip.svg#drip'></use>
       </svg>
     </div> 
-    
-    <!-- social media icons -->
-    <span id="media-icons">
-      <a href="https://github.com/SaraFishburn" target="_blank"> 
-        <svg viewBox="0 0 24 24">
-          <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
-        </svg>
-      </a>
-      <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank">
-        <svg viewBox="0 0 24 24">
-          <use xlink:href='static/images/icons/linkedin-line.svg#linkedin-line'></use>
-        </svg>
-      </a>
-      <a href="https://twitter.com/FishburnSara" target="_blank">
-        <svg viewBox="0 0 24 24">
-          <use xlink:href='static/images/icons/twitter-line.svg#twitter-line'></use>
-        </svg>
-      </a>
-    </span>
 
     <!-- copyright notice -->
     <small id="copyright" >&copy; Copyright Sara Fishburn, All Rights Reserved.</small>

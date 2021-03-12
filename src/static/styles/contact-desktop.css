@@ -1,0 +1,36 @@
+@media only screen and (min-width: 1025px) {
+  main {
+    height: 100vh;
+    grid-template-columns: auto 30%;
+    grid-template-rows: auto 200px repeat(2, auto);
+    grid-template-areas: ". ."
+                         "header top-graphic"
+                         "form top-graphic"
+                         "socials top-graphic"
+  }
+
+  #drip-top {
+    top: -5%;
+  }
+
+  #heading {
+    margin: 0px 0px 10px 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  #heading h1 {
+    font-size: 4rem;
+  }
+
+  #heading h2 {
+    font-size: 1.5rem;
+  }
+
+  form {
+    grid-area: form;
+    margin-left: 10vw;
+    width: 50vw;
+  }
+}

@@ -1,0 +1,84 @@
+@media only screen and (min-width: 551px) {
+  main { 
+    grid-template-columns: 10vw repeat(4, auto);
+    grid-template-rows: 55vw repeat(4, auto) 45vw;
+    grid-template-areas: "top-graphic top-graphic top-graphic top-graphic top-graphic"
+                         "header sql . flask flask"
+                         ". html html . js"
+                         "socials css css python python"
+                         "socials . c scratch ruby"
+                         "footer footer footer footer footer";
+  }
+
+  #heading {
+    transform: translate(10vw, -5vw);
+    margin: 0;
+  }
+  
+  #html-bubble {
+    --circle-width: 22.5vw;
+    left: 30%;
+    top: 5%;
+  }
+  
+  #js-bubble {
+    --circle-width: 18vw;
+    left: -25%;
+    top: -5%;
+  }
+  
+  #ruby-bubble {
+    --circle-width: 15vw;
+    top: 0%;
+  }
+  
+  #css-bubble {
+    --circle-width: 21vw;
+    left: -20%;
+    top: -20%;
+  }
+  
+  #python-bubble {
+    --circle-width: 33vw;
+    left: -20%;
+    top: -5%;
+  }
+  
+  #flask-bubble {
+    --circle-width: 26vw;
+    left: -25%;
+    top: 0%;
+  }
+  
+  #c-bubble {
+    --circle-width: 16vw;
+    left: -20%;
+    top: -20%;
+  }
+  
+  #sql-bubble {
+    --circle-width: 15vw;
+    padding-bottom: 0%;
+    left: 15%;
+    top: 25%;
+  }
+
+  #scratch {
+    overflow: visible;
+    display: block;
+    transform: none;
+    left: 115%;
+    top: 105%;
+  }
+
+  #scratch svg {
+    height: 20vw;
+    transform: translateX(25%);
+  }
+}
+
+@media only screen and (min-width: 775px) {
+  main {
+    grid-template-rows: 45vw repeat(4, auto) 45vw;
+  }
+}

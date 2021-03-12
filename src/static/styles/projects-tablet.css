@@ -1,0 +1,11 @@
+@media only screen and (min-width: 551px) {
+  main { 
+    grid-template-rows: 55vw repeat(6, auto) 0vw 55vw;
+  }
+}
+
+@media only screen and (min-width: 775px) {
+  main {
+    grid-template-rows: 45vw repeat(6, auto) 0vw 55vw;
+  }
+}

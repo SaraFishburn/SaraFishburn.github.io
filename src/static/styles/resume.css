@@ -1,33 +1,11 @@
 main {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: repeat(5, auto) 90vw;
+  grid-template-rows: repeat(4, auto) 90vw 0vw;
   grid-template-areas: "top-graphic"
                        "header"
                        "link"
-                       "education"
-                       "employment"
+                       "content"
+                       "socials"
                        "footer";
-  overflow: hidden;
-  position: relative;
-}
-
-h1, h2, h3, h4, a, article {
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-}
-
-.heading {
-  grid-area: header;
-  margin-left: 10vw;
-  width: fit-content;
-  margin-bottom: 30px;
-}
-
-.heading h1 {
-  color: var(--light-1);
-  font-size: 2.8rem;
-  font-weight: 400;
 }
 
 #resume-link {
@@ -42,21 +20,11 @@ h1, h2, h3, h4, a, article {
   color: var(--accent);
 }
 
-#resume-link::after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 8px;
-  background-color: var(--accent);
-  opacity: 0.3;
-  bottom: 0;
-  left: 0;
-}
-
 section {
   margin-bottom: 80px;
   margin-left: 10vw;
   width: 80vw;
+  max-width: 360px;
 }
 
 .topic {
@@ -70,14 +38,18 @@ section {
 .chunk:hover .text {
   background-color: #ffffff0e;
   border-radius: 15px;
+  transition: 0.5s;
 }
 
 .chunk:hover .circle {
   background-color: var(--accent);
   opacity: 0.6;
+  transition: 0.5s;
 }
 
 .circle-line {
+  --circle: 60px;
+  --small-blue-circle: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,67 +57,71 @@ section {
 }
 
 .topic .circle-line {
-  box-sizing: border-box;
   padding: 0 20px;
 }
 
 .small-blue-circle {
-  width: 20px;
-  height: 20px;
+  width: var(--small-blue-circle);
+  height: var(--small-blue-circle);
   background-color: var(--accent);
   border-radius: 50%;
 }
 
 .circle {
-  width: 60px;
-  height: 60px;
+  width: var(--circle);
+  height: var(--circle);
   border-radius: 50%;
   border: 1px solid white;
 }
 
 .line {
   width: 1px;
-  height: calc(100% - 60px);
+  height: calc(100% - var(--circle));
   background-color: white;
 }
 
 .topic .line {
-  height: calc(100% - 20px);
+  height: calc(100% - var(--small-blue-circle));
 }
 
 .last-line {
-  height: calc(100% - 80px);
+  height: calc(100% - (var(--small-blue-circle) + var(--circle)));
 }
 
 .text {
   padding: 0 10px;
-  transition: 0.5s;
 }
 
-section h1 {
+section h1, section h2 {
   opacity: 0.8;
+}
+
+section h2, section h3, section h4 {
+  font-weight: 400;
+}
+
+section h3, section h4, section h5, article {
+  opacity: 0.6;
+}
+
+
+section h1 {
   font-size: 1.7rem;
   margin-bottom: 2.5rem;
   width: 65vw;
 }
 
 section h2 {
-  opacity: 0.8;
-  font-weight: 400;
   font-size: 1.4rem;
   margin-top: calc(30px - 1rem);
 }
 
 section h3 {
   font-size: 0.9rem;
-  font-weight: 400;
-  opacity: 0.6;
 }
 
 section h4 {
   font-size: 1rem;
-  font-weight: 400;
-  opacity: 0.6;
   color: var(--accent);
   margin: 0;
   margin-bottom: 1.2rem;
@@ -153,7 +129,6 @@ section h4 {
 
 article {
   margin-bottom: 2.5rem;
-  opacity: 0.6;
   line-height: 1.5;
   font-size: 0.9rem;
 }

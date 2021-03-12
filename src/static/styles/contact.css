@@ -1,36 +1,21 @@
 main {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: repeat(6, auto) 90vw;
+  grid-template-rows: repeat(3, auto) 90vw 0vw;
   grid-template-areas: "top-graphic"
                        "header"
                        "form"
+                       "socials"
                        "footer";
-  overflow: hidden;
-  position: relative;
 }
 
-.heading {
-  grid-area: header;
-  margin-left: 10vw;
-  width: fit-content;
+#heading {
   margin-top: 20px;
   margin-bottom: 50px;
 }
 
-.heading h1 {
-  color: var(--light-1);
-  font-size: 2.8rem;
-  font-weight: 400;
-}
-
-.heading h2 {
-  color: var(--accent);
+#heading h2 {
   font-size: 1rem;
-  font-weight: 100;
 }
 
-/* work in progress  */
 
 form {
   position: relative;
@@ -71,6 +56,10 @@ form {
   width: 100%;
 }
 
+.input-label, .text-field, .error-field, #sent-message, button {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .input-label  {
   position: absolute;
   font-size: 1rem;
@@ -82,9 +71,9 @@ form {
   transition: .1s ease-out;
   transform-origin: left top;
   pointer-events: none;
-  font-family: 'Montserrat', sans-serif;
 }
 
+/* add line same color as background to hide input border */
 .input-label::before {
   content: "";
   position: absolute;
@@ -111,7 +100,6 @@ form {
   background-color: transparent;
   opacity: 0.6;
   width: inherit;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 100;
 }
 
@@ -120,12 +108,14 @@ form {
   opacity: 0.87;
 }
 
+/* move and scale input label on focus */
 .text-field:focus + label  {
   color: var(--accent);
   top: 0;
   transform: translateY(-50%) scale(.9);
 }
 
+/* if text has been entered into input field, keep label at top */
 .text-field:not(:placeholder-shown) + label  {
   top: 0;
   transform: translateY(-50%) scale(.9);
@@ -135,7 +125,7 @@ form {
   margin-bottom: 4px;
 }
 
-/* removing chrome autofill input background color  */
+/* removing chrome autofill input background color */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -145,7 +135,7 @@ input:-webkit-autofill:active {
   caret-color: white;
 }
 
-.sent-banner {
+#sent-banner {
   width: max-content;
   margin-left: 15px;
   margin-right: 15px;
@@ -157,32 +147,32 @@ input:-webkit-autofill:active {
   color: var(--light-1);
 }
 
-.sent-message {
+#sent-message {
   transform: translateY(-20%);
-  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 1rem;
 }
 
-.sent-div {
+#sent-div {
   display: flex;
   justify-content: space-between;
   z-index: 101;
 }
 
+/* added to #sent-message via javascript on confirmtaion of message sent */
 .show-sent {
-  opacity: 1;
-  transform: translateY(-22%);
+  opacity: 0.8 !important;
+  transform: translateY(-22%) !important;
 }
 
-.empty-field {
+/* text added to this field via javascript when validation fails */
+.error-field {
   height: 20px;
   width: 100%;
   padding-left: 20px;
   font-size: 12px;
   margin-bottom: 15px;
   color: #DF9AA7;
-  font-family: 'Montserrat', sans-serif;
 }
 
 button {
@@ -194,21 +184,20 @@ button {
   background-color: var(--accent);
   color: var(--dark-4);
   font-size: 1.2rem;
-  font-family: 'Montserrat', sans-serif;
   opacity: 0.8;
   cursor: pointer;
-  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+  box-shadow: var(--box-dp4);
 }
 
 button:hover {
   opacity: 1;
-  box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.20);
+  box-shadow: var(--box-dp8);
   transform: scale(1.02, 1.02);
 }
 
 button:active {
   transform: scale(1.05, 1.05);
-  box-shadow: 0 12px 17px 2px rgba(0,0,0,0.14), 0 5px 22px 4px rgba(0,0,0,0.12), 0 7px 8px -4px rgba(0,0,0,0.20);
+  box-shadow: var(--box-dp12);
 }
 
 button:focus {

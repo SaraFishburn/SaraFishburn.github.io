@@ -1,0 +1,58 @@
+@media only screen and (min-width: 1025px) {
+  main {
+    height: 100vh;
+    grid-template-columns: 100px auto 30%;
+    grid-template-rows: 70px 100px 30px auto;
+    grid-template-areas: ". . top-graphic"
+                         ". header top-graphic"
+                         ". link top-graphic"
+                         "socials content top-graphic"
+  }
+
+  #drip-top {
+    left: 15%;
+  }
+
+  #heading {
+    position: relative;
+    margin-left: 0;
+    top: 50%;
+    left: 5%;
+  }
+
+  #resume-link {
+    margin-left: 0;
+    top: 55%;
+    left: 10%;
+  }
+
+  #content {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+
+  #content section {
+    position: relative;
+    width: 40vw;
+    max-width: 450px;
+    margin-left: 0px;
+    transform: scale(0.9);
+    height: fit-content;
+    height: max-content;
+  }
+
+  #content section:nth-child(1) {
+    top: 10%;
+  }
+
+  #content section:nth-child(2) {
+    top: -15%;
+    left: -5%;
+  }
+
+  #media-icons {
+    margin-left: 1vw;
+    bottom: 20%;
+  }
+}

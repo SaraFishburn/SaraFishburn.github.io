@@ -1,7 +1,5 @@
 main {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: repeat(7, auto) 75vw;
+  grid-template-rows: repeat(7, auto) 0vw 70vw;
   grid-template-areas: "top-graphic"
                        "header"
                        "folio"
@@ -9,22 +7,12 @@ main {
                        "dots"
                        "possible"
                        "floss"
+                       "socials"
                        "footer";
-  overflow: hidden;
-  position: relative;
 }
 
-.heading {
-  grid-area: header;
-  margin-left: 10vw;
-  width: fit-content;
+#heading {
   margin-bottom: 70px;
-}
-
-.heading h1 {
-  color: var(--light-1);
-  font-size: 2.8rem;
-  font-weight: 400;
 }
 
 .project {
@@ -35,14 +23,11 @@ main {
   margin-bottom: 100px;
 }
 
-.project h2 {
-  color: var(--light-1);
-}
-
 .project p {
   color: var(--light-2);
   text-align: center;
   width: 80vw;
+  max-width: 400px;
   line-height: 2rem;
 }
 
@@ -50,17 +35,7 @@ main {
   position: relative;
   color: var(--accent);
   font-weight: 700;
-  justify-self: center;}
-
-.project .link::after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 8px;
-  background-color: var(--accent);
-  opacity: 0.3;
-  bottom: 0;
-  left: 0;
+  justify-self: center;
 }
 
 .project span, .project small{
@@ -68,28 +43,49 @@ main {
   opacity: 0.8;
 }
 
+/* place graphical content within computer screen graphic */
+.monitor {
+  --monitor-color: #ffffff96;
+
+  --monitor-width: 80vw;
+  --monitor-height: calc(var(--monitor-width) * 0.75);
+
+  --max-monitor-width: 500px;
+  --max-monitor-height: calc(var(--max-monitor-width) * 0.75);
+}
+
 .image-border {
   position: relative;
   display: flex;
   justify-content: center;
-  height: 60vw;
-  width: 80vw;
-  border: 2px solid #ffffff96;
+
+  width: var(--monitor-width);
+  height: var(--monitor-height);
+
+  max-width: var(--max-monitor-width);
+  max-height: var(--max-monitor-height);
+
+  border: 2px solid var(--monitor-color);
   border-radius: 15px;
 }
 
 .image-border::after {
   content: '';
   position: absolute;
-  width: 80vw;
+  width: var(--monitor-width);
+  max-width: var(--max-monitor-width);
   height: 2px;
-  bottom: 3vw;
-  background-color: #ffffff96;
+  bottom: 4%;
+  background-color: var(--monitor-color);
 }
 
 .image-wrapper {
-  width: 76vw;
-  height: 53vw;
+  width: calc(var(--monitor-width) * (76 / 80));
+  height: calc(var(--monitor-height) * (53 / 60));
+
+  max-width: calc(var(--max-monitor-width) * (76 / 80));
+  max-height: calc(var(--max-monitor-height) * (53 / 60));
+
   position: absolute;
   overflow: hidden;
   border-radius: 15px;
@@ -99,6 +95,9 @@ main {
 .image-wrapper img, .image-wrapper iframe {
   width: inherit;
   height: inherit;
+
+  max-width: inherit;
+  max-height: inherit;
 }
 
 .frame-base {
@@ -113,26 +112,37 @@ main {
 
 .left-stand, .right-stand, .bottom-stand {
   position: relative;
-  background-color: #ffffff96;
+  background-color: var(--monitor-color);
 }
 
 .left-stand, .right-stand {
-  height: 7vw;
+  height: calc(var(--monitor-width) * 0.07);
+  max-height: calc(var(--max-monitor-width) * 0.07);
   width: 2px;
 }
 
 .left-stand {
-  transform: translateX(6vw) rotate(15deg);
+  transform: rotate(15deg);
+  left: 6%;
 }
 
 .right-stand {
-  transform: translateX(-6vw) rotate(-15deg);
+  transform: rotate(-15deg);
+  left: -6%;
 }
 
 .bottom-stand {
-  width: 21vw;
+  width: calc(var(--monitor-width) * 0.25);
+  max-width: calc(var(--max-monitor-width) * 0.25);
   height: 2px;
   transform: translateY(7px);
+}
+
+time {
+  color: var(--accent);
+  opacity: 0.8;
+  font-size: 0.7rem;
+  margin-bottom: 20px;
 }
 
 #portfolio {

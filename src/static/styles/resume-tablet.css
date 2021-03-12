@@ -1,0 +1,51 @@
+@media only screen and (min-width: 551px) {
+  main {
+    grid-template-rows: 55vw repeat(5, auto) 45vw;
+  }
+
+  #heading {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 0;
+  }
+
+  #resume-link {
+    margin: auto;
+    margin-bottom: 70px;
+  }
+
+  #content {
+    grid-area: content;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+  }
+
+  section {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  #media-icons {
+    margin-left: 3vw;
+  }
+}
+
+@media only screen and (min-width: 775px) {
+  main {
+    grid-template-rows: 42vw repeat(5, auto) 45vw;
+  }
+}
+
+@media only screen and (min-width: 930px) {
+  #heading {
+    margin-left: 10vw;
+  }
+
+  #resume-link {
+    margin-left: 20vw;
+  }
+
+}

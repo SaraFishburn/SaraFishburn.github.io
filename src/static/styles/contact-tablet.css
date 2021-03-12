@@ -1,0 +1,24 @@
+@media only screen and (min-width: 551px) {
+  main {
+    grid-template-rows: 55vw repeat(5, auto) 50vw;
+  }
+
+  #heading {
+    margin-left: 15vw;
+  }
+
+  form {
+    margin-left: 15vw;
+    max-width: 700px;
+  }
+
+  #media-icons {
+    margin-left: 2vw;
+  }
+}
+
+@media only screen and (min-width: 775px) {
+  main {
+    grid-template-rows: 42vw repeat(5, auto) 50vw;
+  }
+}

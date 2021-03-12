@@ -1,3 +1,4 @@
+// delay function
 let sleep = function(time) 
 {
     return new Promise(function(r) {
@@ -5,21 +6,27 @@ let sleep = function(time)
     })
 }
 
+// acknowledge that message has been sent
 async function sent()
 {
     let texts = ['entry.1777739869', 'entry.252200460', 'entry.1506996381']
+
+    // clear form
     for(let text of texts)
     {
         document.forms["form"][text].value = ''
     }
     
+    // show sent message
     let element = document.getElementById('sent-banner')
     element.classList.add('show-sent')
 
+    // hide message again after a delay
     await sleep(3000)
     element.classList.remove('show-sent')
 }
 
+// ensure all input fields contain content
 function validateForm() 
 {
     let ids = ["email", "name", 'message']

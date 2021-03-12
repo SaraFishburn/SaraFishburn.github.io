@@ -1,0 +1,42 @@
+@media only screen and (min-width: 1025px) {
+  main {
+    grid-template-columns: 0% 20% 50% 30%;
+    grid-template-rows: 100px repeat(3, auto);
+    grid-template-areas: ". . . top-graphic"
+                         ". pic header top-graphic"
+                         ". socials text top-graphic"
+                         ". socials footer top-graphic";
+    height: 100vh;
+  }
+
+  #drip-top {
+    left: 15%;
+  }
+
+  #heading {
+    margin-left: 30px;
+  }
+
+  #heading h2 {
+    font-size: 2rem;
+  }
+  
+  #heading h1 {
+    font-size: 2.85rem;
+  }
+  
+  #heading h3 {
+    font-size: 1.7rem;
+  }
+
+  article {
+    font-size: 1.1rem;
+    width: 40vw;
+    max-width: 600px;
+    margin-left: 30px;
+  }
+
+  #media-icons {
+    margin: 0;
+  }
+}
