@@ -15,12 +15,23 @@ main {
   margin-bottom: 70px;
 }
 
+#tabs {
+  opacity: 0;
+}
+
 .project {
   display: flex;
   flex-direction: column;
   position: relative;
   align-items: center;
   margin-bottom: 100px;
+  z-index: 500;
+}
+
+.project article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project p {
@@ -89,7 +100,7 @@ main {
   position: absolute;
   overflow: hidden;
   border-radius: 15px;
-  top: 1.9vw;
+  top: 3.5%;
 }
 
 .image-wrapper img, .image-wrapper iframe {

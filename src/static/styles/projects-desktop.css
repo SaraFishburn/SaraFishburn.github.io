@@ -1,0 +1,38 @@
+@media only screen and (min-width: 1025px) {
+  main {
+    height: 100vh;
+    grid-template-columns: 900px auto;
+    grid-template-rows: 100px 80px 70px auto 0vw;
+    grid-template-areas: ". top-graphic"
+                         "header top-graphic"
+                         "tabs top-graphic"
+                         "content top-graphic"
+                         "socials top-graphic"
+  }
+
+  #tabs {
+    max-width: 650px;
+    padding-left: 0px;
+    margin-left: 10vw;
+    margin-bottom: 30px;
+    left: 4%;
+    z-index: 1000;
+    height: fit-content;
+  }
+
+  .project {
+    grid-area: content !important;
+    flex-direction: row;
+    margin-left: 10vw;
+    margin-right: 2vw;
+    justify-content: flex-start;
+    height: fit-content;
+  }
+
+  .project article {
+    margin-left: 20px;
+    align-self: flex-start;
+    width: 350px;
+    height: 350px;
+  }
+}

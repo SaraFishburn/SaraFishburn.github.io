@@ -1,11 +1,94 @@
 @media only screen and (min-width: 551px) {
   main { 
-    grid-template-rows: 55vw repeat(6, auto) 0vw 55vw;
+    grid-template-rows: repeat(4, auto) 0vw 50vw;
+    grid-template-areas: "top-graphic"
+                         "header"
+                         "tabs"
+                         "content"
+                         "socials"
+                         "footer";
   }
+
+  #heading {
+    margin-bottom: 30px;
+  }
+
+  #tabs {
+    opacity: 1;
+    grid-area: tabs;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffff96;
+    width: 80vw;
+    max-width: 750px;
+    padding-left: 0px;
+    margin-left: 15vw;
+    margin-bottom: 30px;
+    left: 4%;
+  }
+
+  #tabs li {
+    position: relative;
+    padding-bottom: 5px;
+    top: 1px;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  #tabs li:hover {
+    color: var(--accent);
+  }
+  
+  .active-tab {
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+  }
+
+  .project {
+    grid-area: content !important;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 15vw;
+    margin-right: 5vw;
+    margin-bottom: 0px;
+    justify-content: center;
+    opacity: 0;
+  }
+
+  .monitor {
+    --max-monitor-width: 350px
+  }
+  
+  .project h2 {
+    display: none;
+  }
+
+  .project p {
+    text-align: left;
+    width: 350px;
+  }
+
+  .project article {
+    margin-left: 20px;
+    align-self: flex-start;
+    width: 350px;
+    height: 350px;
+  }
+
+  time {
+    align-self: flex-start;
+  }
+
 }
 
 @media only screen and (min-width: 775px) {
   main {
     grid-template-rows: 45vw repeat(6, auto) 0vw 55vw;
+  }
+}
+
+@media only screen and (min-width: 905px) {
+  .project {
+    justify-content: flex-start;
   }
 }

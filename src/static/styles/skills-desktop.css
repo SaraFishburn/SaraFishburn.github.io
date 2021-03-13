@@ -1,12 +1,16 @@
 @media only screen and (min-width: 1025px) {
   main { 
-    grid-template-columns: 10vw repeat(5, auto);
+    grid-template-columns: 80px repeat(5, auto);
     grid-template-rows: 70px repeat(3, auto);
     grid-template-areas: ". . . . . top-graphic"
                          "header sql html flask flask top-graphic"
                          ". css . python js top-graphic"
                          "socials footer c ruby scratch top-graphic";
     height: 100vh;
+  }
+
+  #drip-top {
+    left: 10%;
   }
 
   #heading {

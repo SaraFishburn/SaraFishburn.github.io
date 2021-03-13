@@ -9,10 +9,6 @@
                          "socials content top-graphic"
   }
 
-  #drip-top {
-    left: 15%;
-  }
-
   #heading {
     position: relative;
     margin-left: 0;
@@ -27,6 +23,9 @@
   }
 
   #content {
+    position: relative;
+    top: -5%;
+    left: -2%;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
@@ -47,12 +46,26 @@
   }
 
   #content section:nth-child(2) {
-    top: -15%;
-    left: -5%;
+    top: -13%;
+    left: -7%;
+  }
+
+  .topic h1 {
+    margin-bottom: 1.2rem;
+  }
+
+  article {
+    margin-bottom: 1rem;
   }
 
   #media-icons {
     margin-left: 1vw;
     bottom: 20%;
+  }
+}
+
+@media only screen and (min-width: 1120px) {
+  #drip-top {
+    left: -10%;
   }
 }

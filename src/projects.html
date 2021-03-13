@@ -26,6 +26,7 @@
 
   <!-- javascript -->
   <script src="static/javascript/global.js"></script>
+  <script src="static/javascript/projects.js"></script>
 
   <title>Sara Fishburn: Projects</title>
 
@@ -94,6 +95,15 @@
       <h1>PROJECTS</h1>
     </section>
 
+    <!-- tabs -->
+    <ul id="tabs">
+      <li id="folio-tab">Portfolio</li>
+      <li id="filter-tab">Filter</li>
+      <li id="dots-tab">Dots</li>
+      <li id="possible-tab">Project Possible</li>
+      <li id="flossily-tab">Flossily</li>
+    </ul>
+
     <!-- portfolio -->
     <section class="project" id="portfolio">
       <div class="monitor">
@@ -108,17 +118,19 @@
           <div class="right-stand"></div>
         </div>
       </div>
-      <h2>- Old Portfolio -</h2>
-      <time datetime="2020-10-11">October 11, 2020</time>
-      <p>
-        My first portfolio website. Written in 
-        <span>HTML</span>, 
-        <span>CSS</span>, and
-        <span>Javascript</span>. 
-        Made as the eigth project for Harvard's online CS50 - Introduction to 
-        Computer Science course.
-      </p>
-      <p><a class="link link-underline" href="http://sara-fishburn-portfolio.s3-website-ap-southeast-2.amazonaws.com/index.html" target="_blank">Check it out here</a></p>
+      <article>
+        <h2>- Old Portfolio -</h2>
+        <time datetime="2020-10-11">October 11, 2020</time>
+        <p>
+          My first portfolio website. Written in 
+          <span>HTML</span>, 
+          <span>CSS</span>, and
+          <span>Javascript</span>. 
+          Made as the eigth project for Harvard's online CS50 - Introduction to 
+          Computer Science course.
+        </p>
+        <p><a class="link link-underline" href="http://sara-fishburn-portfolio.s3-website-ap-southeast-2.amazonaws.com/index.html" target="_blank">Check it out here</a></p>
+      </article>
     </section>
         
     <!-- filter -->
@@ -133,20 +145,22 @@
           <div class="right-stand"></div>
         </div>
       </div>
-      <h2>- Filter -</h2>
-      <time datetime="2020-07-31">July 31, 2020</time>
-      <p>Created for CS50's Problem Set 4.</p>
-      <p>
-        Built in 
-        <span>C</span>, 
-        an image is taken and each pixel is iterated through and modified to correspond with the 
-        appropriate effect the desired filter (black and white, mirror, blur, or edge detection) should display.
-      </p>
-      <a href="#" target="_blank"> 
-        <svg viewBox="0 0 24 24">
-          <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
-        </svg>
-      </a> 
+      <article>
+        <h2>- Filter -</h2>
+        <time datetime="2020-07-31">July 31, 2020</time>
+        <p>Created for CS50's Problem Set 4.</p>
+        <p>
+          Built in 
+          <span>C</span>, 
+          an image is taken and each pixel is iterated through and modified to correspond with the 
+          appropriate effect the desired filter (black and white, mirror, blur, or edge detection) should display.
+        </p>
+        <a href="#" target="_blank"> 
+          <svg viewBox="0 0 24 24">
+            <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
+          </svg>
+        </a> 
+      </article>
     </section>
         
     <!-- dots -->
@@ -163,15 +177,17 @@
           <div class="right-stand"></div>
         </div>
       </div>
-      <h2>- Dots -</h2>
-      <time datetime="2020-10-10">October 2017</time>
-      <p>University of Queensland's CSSE1001 Assignment 3 2017.</p>
-      <p>
-        A simple tile matching puzzle game built in 
-        <span>Python</span> 
-        which includes different game modes and special tiles 
-        that cause effects when activated.
-      </p>
+      <article>
+        <h2>- Dots -</h2>
+        <time datetime="2020-10-10">October 2017</time>
+        <p>University of Queensland's CSSE1001 Assignment 3 2017.</p>
+        <p>
+          A simple tile matching puzzle game built in 
+          <span>Python</span> 
+          which includes different game modes and special tiles 
+          that cause effects when activated.
+        </p>
+      </article>
     </section>
     
     <!-- project possible -->
@@ -189,18 +205,20 @@
           <div class="right-stand"></div>
         </div>
       </div>
-      <h2>- Project Possible -</h2>
-      <time datetime="2020-10-10">July 2020</time>
-      <p>Created for CS50's Problem Set 0.</p>
-      <p>
-        An endless runner game built in 
-        <span>Scratch</span>
-        which continuosly 
-        increases in speed and randomly generates obstacles. Includes 
-        animations for running, jumping, and rolling as well as explosions on collisions with obstacles.
-      </p>
-      <p>Press space to jump and down arrow to roll.</p>
-      <small>*note: Sorry! scratch games cant be played on mobile :(</small>
+      <article>
+        <h2>- Project Possible -</h2>
+        <time datetime="2020-10-10">July 2020</time>
+        <p>Created for CS50's Problem Set 0.</p>
+        <p>
+          An endless runner game built in 
+          <span>Scratch</span>
+          which continuosly 
+          increases in speed and randomly generates obstacles. Includes 
+          animations for running, jumping, and rolling as well as explosions on collisions with obstacles.
+        </p>
+        <p>Press space to jump and down arrow to roll.</p>
+        <small>*note: Sorry! scratch games cant be played on mobile :(</small>
+      </article>
     </section>
     
     <!-- flossily -->
@@ -215,25 +233,27 @@
           <div class="right-stand"></div>
         </div>
       </div>
-      <h2>- Flossily -</h2>
-      <time datetime="2020-12-01">Started December 2020</time>
-      <p>
-        Flossily is an embroidery floss organisation website written in 
-        <span>Python</span> with 
-        <span>Flask</span>,
-        <span>Javascript</span>,
-        <span>HTML</span>, and 
-        <span>CSS</span>. 
-        Utilising an SQL database.
-      </p>
-      <p>
-        The website is a current work in progress, being made as the last project before the completion of CS50. 
-      </p>
-      <a href="#" target="_blank"> 
-        <svg viewBox="0 0 24 24">
-          <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
-        </svg>
-      </a>
+      <article>
+        <h2>- Flossily -</h2>
+        <time datetime="2020-12-01">Started December 2020</time>
+        <p>
+          Flossily is an embroidery floss organisation website written in 
+          <span>Python</span> with 
+          <span>Flask</span>,
+          <span>Javascript</span>,
+          <span>HTML</span>, and 
+          <span>CSS</span>. 
+          Utilising an SQL database.
+        </p>
+        <p>
+          The website is a current work in progress, being made as the last project before the completion of CS50. 
+        </p>
+        <a href="#" target="_blank"> 
+          <svg viewBox="0 0 24 24">
+            <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
+          </svg>
+        </a>
+      </article>
     </section>
 
     <!-- social media icons -->
