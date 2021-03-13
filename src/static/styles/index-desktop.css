@@ -1,7 +1,7 @@
 @media only screen and (min-width: 1025px) {
   main {
     grid-template-columns: 0% 20% 50% 30%;
-    grid-template-rows: 100px repeat(3, auto);
+    grid-template-rows: 10vw repeat(3, auto);
     grid-template-areas: ". . . top-graphic"
                          ". pic header top-graphic"
                          ". socials text top-graphic"

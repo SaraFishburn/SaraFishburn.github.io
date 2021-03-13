@@ -9,6 +9,10 @@
                          "socials content top-graphic"
   }
 
+  #drip-top {
+    left: -15%;
+  }
+
   #heading {
     position: relative;
     margin-left: 0;
@@ -24,11 +28,12 @@
 
   #content {
     position: relative;
-    top: -5%;
-    left: -2%;
+    top: -2vw;
+    left: -4vw;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    margin-left: 10vw;
   }
 
   #content section {
@@ -46,7 +51,7 @@
   }
 
   #content section:nth-child(2) {
-    top: -13%;
+    top: -5vw;
     left: -7%;
   }
 
@@ -60,12 +65,18 @@
 
   #media-icons {
     margin-left: 1vw;
-    bottom: 20%;
   }
 }
 
 @media only screen and (min-width: 1120px) {
   #drip-top {
-    left: -10%;
+    left: 15%;
   }
+}
+
+@media only screen and (min-width: 1440px) {
+  #content {
+    top: 2vw;
+  }
+
 }

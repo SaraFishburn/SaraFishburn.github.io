@@ -25,7 +25,7 @@
   #drip-top {
     width: 100vh;
     transform: none;
-    left: 10%;
+    height: 100vh;
   }
 
   #drip-top svg {

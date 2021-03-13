@@ -10,7 +10,7 @@
   }
 
   #drip-top {
-    left: 10%;
+    left: 18%;
   }
 
   #heading {
@@ -76,8 +76,8 @@
     position: absolute;
     overflow: hidden;
     width:fit-content;
-    left: 23vw;
-    top: -16vw;
+    left: 27vw;
+    top: -18vw;
   }
 
   #scratch svg {

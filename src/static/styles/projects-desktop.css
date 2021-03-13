@@ -1,8 +1,8 @@
 @media only screen and (min-width: 1025px) {
   main {
     height: 100vh;
-    grid-template-columns: 900px auto;
-    grid-template-rows: 100px 80px 70px auto 0vw;
+    grid-template-columns: 75% auto;
+    grid-template-rows: 10vw 5vw 70px auto 0vw;
     grid-template-areas: ". top-graphic"
                          "header top-graphic"
                          "tabs top-graphic"
@@ -10,11 +10,16 @@
                          "socials top-graphic"
   }
 
+  #drip-top {
+    left: 0%;
+  }
+
   #tabs {
-    max-width: 650px;
     padding-left: 0px;
-    margin-left: 10vw;
+    margin-left: 15vw;
+    margin-right: 5vw;
     margin-bottom: 30px;
+    max-width: 650px;
     left: 4%;
     z-index: 1000;
     height: fit-content;
@@ -23,9 +28,9 @@
   .project {
     grid-area: content !important;
     flex-direction: row;
-    margin-left: 10vw;
-    margin-right: 2vw;
-    justify-content: flex-start;
+    margin-left: 15vw;
+    margin-right: 5vw;
+    justify-content: center;
     height: fit-content;
   }
 
@@ -35,4 +40,12 @@
     width: 350px;
     height: 350px;
   }
+}
+
+@media only screen and (min-width: 1420px) {
+  .project {
+    justify-content: flex-start;
+  }
+
+
 }

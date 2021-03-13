@@ -55,6 +55,7 @@ main {
 }
 
 /* place graphical content within computer screen graphic */
+/* make all graphic elements responsive */
 .monitor {
   --monitor-color: #ffffff96;
 
@@ -91,16 +92,32 @@ main {
 }
 
 .image-wrapper {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 15px;
+  top: 3.5%;
+}
+
+.image-wrapper, .carousel-cell, .carousel-cell img, .flickity-viewport{
   width: calc(var(--monitor-width) * (76 / 80));
   height: calc(var(--monitor-height) * (53 / 60));
 
   max-width: calc(var(--max-monitor-width) * (76 / 80));
   max-height: calc(var(--max-monitor-height) * (53 / 60));
+}
 
-  position: absolute;
-  overflow: hidden;
-  border-radius: 15px;
-  top: 3.5%;
+/* light styling of carousel */
+.flickity-page-dots .dot {
+  opacity: 0.6;
+  background: white;
+}
+
+.flickity-page-dots {
+  bottom: 10%;
+}
+
+.flickity-button, .flickity-button:hover {
+  background: transparent;
 }
 
 .image-wrapper img, .image-wrapper iframe {
@@ -111,6 +128,7 @@ main {
   max-height: inherit;
 }
 
+/* continue styling monitor graphic */
 .frame-base {
   position: relative;
   display: flex;
@@ -148,6 +166,7 @@ main {
   height: 2px;
   transform: translateY(7px);
 }
+/* end graphic styling */
 
 time {
   color: var(--accent);

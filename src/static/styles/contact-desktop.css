@@ -1,20 +1,15 @@
 @media only screen and (min-width: 1025px) {
   main {
     height: 100vh;
-    grid-template-columns: auto 30%;
-    grid-template-rows: auto 200px repeat(2, auto);
-    grid-template-areas: ". ."
-                         "header top-graphic"
-                         "form top-graphic"
-                         "socials top-graphic"
-  }
-
-  #drip-top {
-    top: -5%;
+    grid-template-columns: 100px auto 25%;
+    grid-template-rows: 8vw 200px repeat(2, auto);
+    grid-template-areas: ". . top-graphic"
+                         ". header top-graphic"
+                         "socials form top-graphic"
   }
 
   #heading {
-    margin: 0px 0px 10px 10vw;
+    margin: 0px 0px 10px 5vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -30,7 +25,18 @@
 
   form {
     grid-area: form;
-    margin-left: 10vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
     width: 50vw;
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  form {
+    margin-left: 10vw;
+  }
+
+  #heading {
+    margin-left: 10vw;
   }
 }

@@ -38,11 +38,6 @@
   #tabs li:hover {
     color: var(--accent);
   }
-  
-  .active-tab {
-    border-bottom: 2px solid var(--accent);
-    color: var(--accent);
-  }
 
   .project {
     grid-area: content !important;
@@ -52,7 +47,16 @@
     margin-right: 5vw;
     margin-bottom: 0px;
     justify-content: center;
-    opacity: 0;
+  }
+
+  .active-tab {
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+  }
+  
+  .hide-project {
+    opacity: 0 !important;
+    pointer-events: none;
   }
 
   .monitor {
