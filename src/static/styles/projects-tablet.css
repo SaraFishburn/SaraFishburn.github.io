@@ -77,6 +77,13 @@
     align-self: flex-start;
     width: 350px;
     height: 350px;
+
+    display: flex;
+    align-items: flex-start;
+  }
+
+  #flossily svg, #filter svg{
+    margin-top: 10px;
   }
 
   time {
