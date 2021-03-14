@@ -31,7 +31,7 @@ The landing page.
 Contains greeting, introduction, and interests.
 Hexagonal profile image is black and white with a transparent blue overlay. When hovered, this image changes to become colored.
 
-[index page](docs/screenshots/index.png)
+![index page](docs/screenshots/index.png)
 
 #### skills.html
 
