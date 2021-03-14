@@ -17,7 +17,7 @@ The main target audience are potential employers who wish to view capabilities a
 
 ### - Sitemap -
 
-![sitemap](docs/readme-images/sitemap.png)
+![sitemap](docs/sitemap.png)
 
 
 ### - Functionality and features -
@@ -35,14 +35,14 @@ The landing page.
 Contains greeting, introduction, and interests.
 Hexagonal profile image is black and white with a transparent blue overlay. When hovered, this image changes to become colored.
 
-![index page](docs/readme-images/index.png)
+![index page](docs/index.png)
 
 #### skills.html
 
 The skills page consists of several 'bubble' graphics which contain the logos of tech language/stylesheet proficiencies.
 Javascript enables a parallax effect on mousemove and on phone tilt.
 
-![skills page](docs/readme-images/skills.png)
+![skills page](docs/skills.png)
 
 #### projects.html
 
@@ -59,14 +59,14 @@ The 'Old Portfolio' project has a link to the deployed website, and 'Filter' and
 
 At tablet and desktop viewport sizes, projects are displayed in a module tab format powered by javascript to add extra user interaction and prevent the need for page scrolling.
 
-![projects page](docs/readme-images/projects.png)
+![projects page](docs/projects.png)
 
 #### resume.html
 
 The resume page contains a link to a resume PDF document hosted on google drive and a brief overview of education and employemnt history layed out with a visually engaging dot point graphic.
 On hover of individual text sections, the text gains a semi-transparent white background and the corresponding dot pont circle gains a blue semi-transparent fill.
 
-![resume page](docs/readme-images/resume.png)
+![resume page](docs/resume.png)
 
 #### contact.html
 
@@ -79,7 +79,7 @@ On click, these transformations intensify further.
 The form also has validation which disallows a user to submit a form with empty text fields and displays error/helper messages below the input fields.
 On successful submission, a thank you message appears at the bottom of the form.
 
-![contact page](docs/readme-images/contact.png)
+![contact page](docs/contact.png)
 
 ### - Tech stack -
 
