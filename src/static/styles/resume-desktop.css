@@ -1,7 +1,7 @@
 @media only screen and (min-width: 1025px) {
   main {
     grid-template-columns: 100px auto 30%;
-    grid-template-rows: 70px 100px 30px auto;
+    grid-template-rows: 70px 80px 30px auto;
     grid-template-areas: ". . top-graphic"
                          ". header top-graphic"
                          ". link top-graphic"
@@ -27,7 +27,7 @@
 
   #content {
     position: relative;
-    top: -2vw;
+    top: -7vw;
     left: -4vw;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -46,11 +46,11 @@
   }
 
   #content section:nth-child(1) {
-    top: 10%;
+    top: 15%;
   }
 
   #content section:nth-child(2) {
-    top: -5vw;
+    top: -3vw;
     left: -7%;
   }
 
@@ -64,6 +64,7 @@
 
   #media-icons {
     margin-left: 1vw;
+    bottom: 25%;
   }
 }
 
@@ -73,9 +74,13 @@
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1441px) {
   #content {
     top: 2vw;
+  }
+
+  #media-icons {
+    bottom: 0%;
   }
 
 }
