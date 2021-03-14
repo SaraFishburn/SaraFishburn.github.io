@@ -25,6 +25,14 @@ Home --> Resume
 Home --> Contact
 ```
 
+```mermaid
+graph LR
+A[Square Rect] -- Link text --> B((Circle))
+A --> C(Round Rect)
+B --> D{Rhombus}
+C --> D
+```
+
 ### - Functionality and features-
 
 The portfolio consists of 5 html pages supported by 6 css files each (3 global and 3 page specific css files for 3 different main viewport sizes).
