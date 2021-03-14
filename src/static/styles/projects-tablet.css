@@ -13,6 +13,7 @@
     margin-bottom: 30px;
   }
 
+  /* show tabs list and style */
   #tabs {
     opacity: 1;
     grid-area: tabs;
@@ -49,6 +50,7 @@
     justify-content: center;
   }
 
+  /* .active-tab and .hide-project are applied and removed via javascript  */
   .active-tab {
     border-bottom: 2px solid var(--accent);
     color: var(--accent);
@@ -59,10 +61,14 @@
     pointer-events: none;
   }
 
+  /* change the max width of monitor graphic. 
+  No other changes have to be made as previous calcs calculate the size of other elements */
   .monitor {
     --max-monitor-width: 350px
   }
   
+  /* hide project headings as they will be visually replaced with tabs.
+  Use opa;city so the elements are still available for screen readers. */
   .project h2 {
     opacity: 0;
   }
@@ -92,6 +98,7 @@
 
 }
 
+/* scale grid cells so drip graphics are always positioned appropriately and not overlapping main content */
 @media only screen and (min-width: 775px) {
   main {
     grid-template-rows: 45vw repeat(6, auto) 0vw 55vw;

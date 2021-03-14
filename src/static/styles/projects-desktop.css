@@ -1,6 +1,5 @@
 @media only screen and (min-width: 1025px) {
   main {
-    height: 100vh;
     grid-template-columns: 75% auto;
     grid-template-rows: 10vw 5vw 70px auto 0vw;
     grid-template-areas: ". top-graphic"

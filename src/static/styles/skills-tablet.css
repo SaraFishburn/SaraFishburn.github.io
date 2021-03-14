@@ -15,6 +15,7 @@
     margin: 0;
   }
   
+  /* resize and re-position all bubbles to be more appropriate for screen size. the rest of the bubble dimansions are determined by previous calcs */
   #html-bubble {
     --circle-width: 22.5vw;
     left: 30%;
@@ -63,6 +64,7 @@
     top: 25%;
   }
 
+  /* re-position scratch cat */
   #scratch {
     overflow: visible;
     display: block;

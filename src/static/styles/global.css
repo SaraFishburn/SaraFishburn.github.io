@@ -2,8 +2,8 @@
 
 :root {
 
-  /* from research, CSS variables not supported by validator but is due to validator not being updated
-  variables required as intentions to implement light mode in future */
+  /* from research, CSS variables not supported by validator but is due to validator not being updated.
+  Variables required. Intentions to implement light mode in future */
   --accent: #00e9f9;
   --light-1: #e1e3e4;
   --light-2: #c3c4c8;
@@ -31,6 +31,7 @@ a {
   color: inherit;
 }
 
+/* set elements to use imported font */
 h1, h2, h3, h4, p, article, li, a, small, span, time, #copyright {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -45,6 +46,8 @@ ul {
 
 body {
   margin: 0;
+
+  /* add gradient background */
   background-color: var(--dark-4); /* Fallback background color for non supported browsers */
   background: linear-gradient(180deg, var(--dark-2) 0%, var(--dark-4) 40%);
 

@@ -6,7 +6,6 @@
                          "header sql html flask flask top-graphic"
                          ". css . python js top-graphic"
                          "socials footer c ruby scratch top-graphic";
-    height: 100vh;
   }
 
   #drip-top {
@@ -20,6 +19,7 @@
     transform: none;
   }
 
+  /* resize and re-position all bubbles to be more appropriate for screen size. the rest of the bubble dimansions are determined by previous calcs */
   #html-bubble {
     --circle-width: 15.1vw;
     left: 80%;
@@ -68,6 +68,7 @@
     top: -5%;
   }
 
+  /* re-position scratch cat */
   #scratch, #scratch svg {
     transform: none;
   }

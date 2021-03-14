@@ -15,8 +15,8 @@
     margin-bottom: 70px;
   }
 
+  /* flex content so sections snap beside eachother when there is enough width to screen */
   #content {
-    grid-area: content;
     display: flex;
     flex-wrap: wrap;
     flex: 1;

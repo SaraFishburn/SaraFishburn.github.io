@@ -8,6 +8,15 @@ main {
                        "footer";
 }
 
+#content {
+  grid-area: content;
+}
+
+#heading {
+  margin-bottom: 80px;
+}
+
+/* link to resume pdf styling */
 #resume-link {
   position: relative;
   grid-area: link;
@@ -19,10 +28,6 @@ main {
   font-size: 1.1rem;
   color: var(--accent);
   z-index: 500;
-}
-
-#heading {
-  margin-bottom: 80px;
 }
 
 section {
@@ -40,6 +45,7 @@ section {
   display: flex;
 }
 
+/* apply a subtle transparent background to text on hover of text/graphic*/
 .chunk:hover article {
   background-color: #ffffff0e;
   border-radius: 15px;
@@ -47,12 +53,14 @@ section {
   cursor: default;
 }
 
+/* apply accent color to fill of dot point graphic on hover of text/graphic */
 .chunk:hover .circle {
   background-color: var(--accent);
   opacity: 0.6;
   transition: 0.5s;
 }
 
+/* dot point graphic */
 .circle-line {
   --circle: 60px;
   --small-blue-circle: 20px;
@@ -95,6 +103,7 @@ section {
   height: calc(100% - (var(--small-blue-circle) + var(--circle)));
 }
 
+/* text styling */
 h2 {
   opacity: 0.8;
   padding-bottom: 1.5rem;

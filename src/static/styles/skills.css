@@ -36,6 +36,7 @@ main {
   box-shadow: var(--box-dp4)
 }
 
+/* apply declared variables to seperate circles so they all scale based on declared --circle-width  */
 .bottom-circle {
   background-color: var(--dark-4);
   width: var(--circle-width);
@@ -54,6 +55,7 @@ main {
   height: var(--top-circle-size);
 }
 
+/* declare width and position of each bubble */
 #html-bubble {
   --circle-width: 47vw;
   grid-area: html;
@@ -113,8 +115,7 @@ main {
   position: absolute;
 }
 
-/* logos scaled depending on their proportions  */
-
+/* logo svgs scaled depending on their proportions to fit best visually within bubbles  */
 #html {
   height: calc(var(--circle-width) * 0.7);
 }
@@ -147,6 +148,7 @@ main {
   height: calc(var(--circle-width) * 0.45);
 }
 
+/* position scratch logo to appear to be peeking out from drip graphic */
 #scratch {
   grid-area: scratch;
   position: relative;
