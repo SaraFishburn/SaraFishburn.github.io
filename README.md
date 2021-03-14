@@ -15,6 +15,14 @@ https://github.com/SaraFishburn/SaraFishburn.github.io
 The purpose of this portfolio is to provide an online medium in which skills, interests, and professional knowledge may be displayed.
 The main target audience are potential employers who wish to view capabilities and gain insight into personality.
 
+### - Sitemap -
+
+graph tb
+Home --> Skills
+Home --> Projects
+Home --> Resume
+Home --> Contact
+
 
 ### - Functionality and features-
 
