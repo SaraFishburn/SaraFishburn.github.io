@@ -16,7 +16,7 @@ The purpose of this portfolio is to provide an online medium in which skills, in
 The main target audience are potential employers who wish to view capabilities and gain insight into personality.
 
 
-### - Functionality -
+### - Functionality and features-
 
 The portfolio consists of 5 html pages supported by 6 css files each (3 global and 3 page specific css files for 3 different main viewport sizes).
 
