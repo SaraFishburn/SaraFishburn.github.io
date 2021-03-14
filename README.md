@@ -17,12 +17,13 @@ The main target audience are potential employers who wish to view capabilities a
 
 ### - Sitemap -
 
+```mermaid
 graph tb
 Home --> Skills
 Home --> Projects
 Home --> Resume
 Home --> Contact
-
+```
 
 ### - Functionality and features-
 
