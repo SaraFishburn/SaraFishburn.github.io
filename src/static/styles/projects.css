@@ -54,8 +54,9 @@ main {
   opacity: 0.8;
 }
 
-/* place graphical content within computer screen graphic */
-/* make all graphic elements responsive */
+/* place graphical content within computer screen graphic 
+make all graphic elements responsive 
+again, css variables mess with validator but code works*/
 .monitor {
   --monitor-color: #ffffff96;
 
@@ -96,6 +97,7 @@ main {
   overflow: hidden;
   border-radius: 15px;
   top: 3.5%;
+  margin-top: 0px;
 }
 
 .image-wrapper, .carousel-cell, .carousel-cell img, .flickity-viewport{
@@ -104,6 +106,10 @@ main {
 
   max-width: calc(var(--max-monitor-width) * (76 / 80));
   max-height: calc(var(--max-monitor-height) * (53 / 60));
+}
+
+iframe {
+  border: none;
 }
 
 /* light styling of carousel */

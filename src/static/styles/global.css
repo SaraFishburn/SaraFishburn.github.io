@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
 
 :root {
+
+  /* from research, CSS variables not supported by validator but is due to validator not being updated
+  variables required as intentions to implement light mode in future */
   --accent: #00e9f9;
   --light-1: #e1e3e4;
   --light-2: #c3c4c8;
@@ -42,11 +45,9 @@ ul {
 
 body {
   margin: 0;
-  background-color: var(--dark-4);
-  background: -moz-linear-gradient(180deg, var(--dark-2) 0%, var(--dark-4) 40%);
-  background: -webkit-linear-gradient(180deg, var(--dark-2) 0%, var(--dark-4) 40%);
+  background-color: var(--dark-4); /* Fallback background color for non supported browsers */
   background: linear-gradient(180deg, var(--dark-2) 0%, var(--dark-4) 40%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--dark-2)",endColorstr="var(--dark-4) ",GradientType=1);
+
   background-position:50% 100%;
   background-size: cover;
   background-repeat: no-repeat;

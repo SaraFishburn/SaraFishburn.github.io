@@ -26,16 +26,17 @@
     font-size: 5.8vw;
   }
   
-  #heading h3 {
-    font-size: 3vw;
+  #intro-header-statement {
+    font-size: 3vw !important;
   }
 
+  /* following max heights and widths dont pass due to css variables :( */
   #headshot-wrapper {
     margin: auto;
     --hex-width: 25vw;
     --max-hex-width: 250px;
     max-width: var(--max-hex-width);
-    max-height: calc(var(--max-hex-width) / 0.8660254);
+    max-height: calc(var(--max-hex-width) / 0.8660254); /* 0.8660254 is a multiplier for height width ratio of an equal hexagon */
     transform: translateX(1vw);
   }
 
@@ -52,7 +53,7 @@
     max-width: var(--max-hex-width);
   }
 
-  article {
+  #text {
     text-align: left;
     width: 45vw;
     margin: 0;
@@ -71,7 +72,7 @@
     grid-template-rows: 45vw auto auto 45vw;
   }
 
-  article {
+  #text {
     font-size: 2vw;
     line-height: 2;
   }

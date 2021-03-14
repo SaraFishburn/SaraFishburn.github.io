@@ -43,7 +43,8 @@
   <!-- nav and drip graphic -->
   <nav>
     <div class="logo-hamburger">
-      <a class="nav-logo" href="../index.html">
+      <!-- added aria hidden as logo link makes home nav link redundant. cant group logo and home link together due to mobile layout -->
+      <a class="nav-logo" href="index.html" aria-hidden="true" title="logo">
         <svg viewBox="0 0 531.66 392.97">
           <use xlink:href='static/images/logo/logo.svg#logo'></use>
         </svg>
@@ -63,17 +64,17 @@
       <li><a href="contact.html">CONTACT</a></li>
       <li id="nav-socials">
         <span id="nav-media-icons">
-          <a href="https://github.com/SaraFishburn" target="_blank"> 
+          <a href="https://github.com/SaraFishburn" target="_blank" aria-label="link to Sara Fishburn's github. opens in new tab"> 
             <svg viewBox="0 0 24 24">
               <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
             </svg>
           </a>
-          <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank">
+          <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank" aria-label="link to Sara Fishburn's linkedin. opens in new tab">
             <svg viewBox="0 0 24 24">
               <use xlink:href='static/images/icons/linkedin-line.svg#linkedin-line'></use>
             </svg>
           </a>
-          <a href="https://twitter.com/FishburnSara" target="_blank">
+          <a href="https://twitter.com/FishburnSara" target="_blank" aria-label="link to Sara Fishburn's twitter. opens in new tab">
             <svg viewBox="0 0 24 24">
               <use xlink:href='static/images/icons/twitter-line.svg#twitter-line'></use>
             </svg>
@@ -99,12 +100,15 @@
     </div>
 
     <!-- heading -->
-    <section id="heading">
+    <hgroup id="heading">
       <h1>PROJECTS</h1>
-    </section>
+    </hgroup>
 
     <!-- tabs -->
-    <ul id="tabs">
+    <!-- aria hidden is applied as the heading of each section serve the same purpose and are within the structure
+    of the correpsonding project div so easier to understand for screen reader.
+    also note in tablet and above project headings are opacity: 0 not display: none so still readable by screen readers -->
+    <ul id="tabs" aria-hidden="true">
       <li id="folio-tab">Portfolio</li>
       <li id="filter-tab">Filter</li>
       <li id="dots-tab">Dots</li>
@@ -113,12 +117,12 @@
     </ul>
 
     <!-- portfolio -->
-    <section class="project hide-project" id="portfolio">
+    <div class="project hide-project" id="portfolio">
       <div class="monitor">
         <div class="image-border">
-          <div class="image-wrapper">
-            <img src="static/images/projects/portfolio.png" alt="">
-          </div>
+          <figure class="image-wrapper">
+            <img src="static/images/projects/portfolio.png" alt="screen shot of home page of old portfolio">
+          </figure>
         </div>
         <div class="frame-base">
           <div class="left-stand"></div>
@@ -139,27 +143,26 @@
         </p>
         <p><a class="link link-underline" href="http://sara-fishburn-portfolio.s3-website-ap-southeast-2.amazonaws.com/index.html" target="_blank">Check it out here</a></p>
       </article>
-    </section>
+    </div>
         
     <!-- filter -->
-    <section class="project hide-project" id="filter">
+    <div class="project hide-project" id="filter">
       <div class="monitor">
-          <div class="image-border">
-            <div class="image-wrapper">
-              <div class="main-carousel">
-                <div class="carousel-cell"><img src="static/images/projects/original.jpg" alt="original image of a university building"></div>
-                <div class="carousel-cell"><img src="static/images/projects/b&w.jpg" alt="uni building filtered and made black and white"></div>
-                <div class="carousel-cell"><img src="static/images/projects/blur.jpg" alt="uni building filtered and made blurry"></div>
-                <div class="carousel-cell"><img src="static/images/projects/mirror.jpg" alt="uni building filtered and made a mirror image of itself"></div>
-                <div class="carousel-cell"><img src="static/images/projects/edge.jpg" alt="uni building filtered and edges detected"></div>
-              </div>
+        <div class="image-border">
+          <figure class="image-wrapper">
+            <div class="main-carousel">
+              <div class="carousel-cell"><img src="static/images/projects/original.jpg" alt="original image of a university building"></div>
+              <div class="carousel-cell"><img src="static/images/projects/b&w.jpg" alt="uni building filtered and made black and white"></div>
+              <div class="carousel-cell"><img src="static/images/projects/blur.jpg" alt="uni building filtered and made blurry"></div>
+              <div class="carousel-cell"><img src="static/images/projects/mirror.jpg" alt="uni building filtered and made a mirror image of itself"></div>
+              <div class="carousel-cell"><img src="static/images/projects/edge.jpg" alt="uni building filtered and edges detected"></div>
             </div>
-          </div>
-          <div class="frame-base">
-            <div class="left-stand"></div>
-            <div class="bottom-stand"></div>
-            <div class="right-stand"></div>
-          </div>
+          </figure>
+        </div>
+        <div class="frame-base">
+          <div class="left-stand"></div>
+          <div class="bottom-stand"></div>
+          <div class="right-stand"></div>
         </div>
       </div>
       <article>
@@ -172,21 +175,21 @@
           an image is taken and each pixel is iterated through and modified to correspond with the 
           appropriate effect the desired filter (black and white, mirror, blur, or edge detection) should display.
         </p>
-        <a href="https://github.com/SaraFishburn/CS50_filter" target="_blank"> 
+        <a href="https://github.com/SaraFishburn/CS50_filter" target="_blank" aria-label="link to 'Filter' github project"> 
           <svg viewBox="0 0 24 24">
             <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
           </svg>
         </a> 
       </article>
-    </section>
+    </div>
         
     <!-- dots -->
-    <section class="project hide-project" id="dots">
+    <div class="project hide-project" id="dots">
       <div class="monitor">
         <div class="image-border">
-          <div class="image-wrapper">
-            <iframe src="https://www.youtube.com/embed/vL1Nv1gWT8U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-          </div>
+          <figure class="image-wrapper" aria-label="youtube video demonstarating the use of the 'dots' game. no audio to caption in video">
+            <iframe src="https://www.youtube.com/embed/vL1Nv1gWT8U" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          </figure>
         </div>
         <div class="frame-base">
           <div class="left-stand"></div>
@@ -205,16 +208,15 @@
           that cause effects when activated.
         </p>
       </article>
-    </section>
+    </div>
     
     <!-- project possible -->
-    <section class="project hide-project" id="possible">
+    <div class="project hide-project" id="possible">
       <div class="monitor">
         <div class="image-border">
-          <div class="image-wrapper">
-            <iframe class="project-preview" src="https://scratch.mit.edu/projects/434747043/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
-          </div>
-          <img src="" alt="">
+          <figure class="image-wrapper" aria-label="embedded scratch game">
+            <iframe class="project-preview" src="https://scratch.mit.edu/projects/434747043/embed" allowfullscreen=""></iframe>
+          </figure>
         </div>
         <div class="frame-base">
           <div class="left-stand"></div>
@@ -236,25 +238,24 @@
         <p>Press space to jump and down arrow to roll.</p>
         <small>*note: Sorry! scratch games cant be played on mobile :(</small>
       </article>
-    </section>
+    </div>
     
     <!-- flossily -->
-    <section class="project hide-project" id="flossily">
+    <div class="project hide-project" id="flossily">
       <div class="monitor">
         <div class="image-border">
-          <div class="image-wrapper">
+          <figure class="image-wrapper">
             <div class="main-carousel" data-flickity='{"autoPlay": "true"}'>
               <div class="carousel-cell"><img src="static/images/projects/flossily-home.png" alt="original image of a university building"></div>
               <div class="carousel-cell"><img src="static/images/projects/flossily-login.png" alt="uni building filtered and made black and white"></div>
               <div class="carousel-cell"><img src="static/images/projects/flossily-join.png" alt="uni building filtered and made blurry"></div>
             </div>
-          </div>
+          </figure>
         </div>
         <div class="frame-base">
           <div class="left-stand"></div>
           <div class="bottom-stand"></div>
           <div class="right-stand"></div>
-        </div>
         </div>
       </div>
       <article>
@@ -272,27 +273,27 @@
         <p>
           The website is a current work in progress, being made as the last project before the completion of CS50. 
         </p>
-        <a href="https://github.com/SaraFishburn/Flossily-CS50-final" target="_blank"> 
+        <a href="https://github.com/SaraFishburn/Flossily-CS50-final" target="_blank" aria-label="link to 'Flossily' github project"> 
           <svg viewBox="0 0 24 24">
             <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
           </svg>
         </a>
       </article>
-    </section>
+    </div>
 
     <!-- social media icons -->
     <span id="media-icons">
-      <a href="https://github.com/SaraFishburn" target="_blank"> 
+      <a href="https://github.com/SaraFishburn" target="_blank" aria-label="link to Sara Fishburn's github. opens in new tab"> 
         <svg viewBox="0 0 24 24">
           <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
         </svg>
       </a>
-      <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank">
+      <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank" aria-label="link to Sara Fishburn's linkedin. opens in new tab">
         <svg viewBox="0 0 24 24">
           <use xlink:href='static/images/icons/linkedin-line.svg#linkedin-line'></use>
         </svg>
       </a>
-      <a href="https://twitter.com/FishburnSara" target="_blank">
+      <a href="https://twitter.com/FishburnSara" target="_blank" aria-label="link to Sara Fishburn's twitter. opens in new tab">
         <svg viewBox="0 0 24 24">
           <use xlink:href='static/images/icons/twitter-line.svg#twitter-line'></use>
         </svg>

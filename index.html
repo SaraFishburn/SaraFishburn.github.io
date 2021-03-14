@@ -34,7 +34,8 @@
   <!-- nav and drip graphic -->
   <nav>
     <div class="logo-hamburger">
-      <a class="nav-logo" href="index.html">
+      <!-- added aria hidden as logo link makes home nav link redundant. cant group logo and home link together due to mobile layout -->
+      <a class="nav-logo" href="index.html" aria-hidden="true" title="logo">
         <svg viewBox="0 0 531.66 392.97">
           <use xlink:href='src/static/images/logo/logo.svg#logo'></use>
         </svg>
@@ -46,26 +47,26 @@
       </div>
     </div>
     <ul id="nav-links">
-      <li><a id="active" href="index.html">HOME</a></li>
+      <li id="home-nav"><a id="active" href="index.html">HOME</a></li>
       <li><a href="src/skills.html">SKILLS</a></li>
       <li><a href="src/projects.html">PROJECTS</a></li>
       <li><a href="src/resume.html">RÉSUMÉ</a></li>
       <li><a href="src/contact.html">CONTACT</a></li>
       <li id="nav-socials">
         <span id="nav-media-icons">
-          <a href="https://github.com/SaraFishburn" target="_blank"> 
+          <a href="https://github.com/SaraFishburn" target="_blank" aria-label="link to Sara Fishburn's github. opens in new tab"> 
             <svg viewBox="0 0 24 24">
-              <use xlink:href='src/static/images/icons/github-line.svg#github-line'></use>
+              <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
             </svg>
           </a>
-          <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank">
+          <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank" aria-label="link to Sara Fishburn's linkedin. opens in new tab">
             <svg viewBox="0 0 24 24">
-              <use xlink:href='src/static/images/icons/linkedin-line.svg#linkedin-line'></use>
+              <use xlink:href='static/images/icons/linkedin-line.svg#linkedin-line'></use>
             </svg>
           </a>
-          <a href="https://twitter.com/FishburnSara" target="_blank">
+          <a href="https://twitter.com/FishburnSara" target="_blank" aria-label="link to Sara Fishburn's twitter. opens in new tab">
             <svg viewBox="0 0 24 24">
-              <use xlink:href='src/static/images/icons/twitter-line.svg#twitter-line'></use>
+              <use xlink:href='static/images/icons/twitter-line.svg#twitter-line'></use>
             </svg>
           </a>
         </span>
@@ -89,24 +90,24 @@
     </div>
 
     <!-- heading -->
-    <section id="heading">
+    <hgroup id="heading">
       <h2>Hello, my name is</h2>
       <h1>Sara Fishburn</h1>
-      <h3>I'm an aspiring web developer</h3>
-    </section>
+      <h2 id="intro-header-statement">I'm an aspiring web developer</h2>
+    </hgroup>
 
     <!-- profile pic -->
     <div id="headshot-wrapper">
-      <div id="headshot">
-        <img src="src/static/images/headshot.jpg" alt="Color headshot of Sara Fishburn">
-      </div>
+      <figure id="headshot">
+        <img src="src/static/images/headshot.jpg" alt="Profile image of Sara Fishburn">
+      </figure>
       <svg viewBox="0 0 423.2 981.44">
         <use xlink:href='src/static/images/headshot-border.svg#headshot-border'></use>
       </svg>
     </div>
 
     <!-- text -->
-    <article>
+    <div id="text">
       <p>
         Hi there! I'm a current fast-track 
         <a class="link-underline" href="https://coderacademy.edu.au/" target="_blank">Coder Academy</a> 
@@ -126,21 +127,21 @@
         creating useful (and not so useful) gadgets on my
         <span>3D printer</span>.
       </p>
-    </article>
+    </div>
 
     <!-- social media icons -->
     <span id="media-icons">
-      <a href="https://github.com/SaraFishburn" target="_blank"> 
+      <a href="https://github.com/SaraFishburn" target="_blank" aria-label="link to Sara Fishburn's github. opens in new tab"> 
         <svg viewBox="0 0 24 24">
           <use xlink:href='src/static/images/icons/github-line.svg#github-line'></use>
         </svg>
       </a>
-      <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank">
+      <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank" aria-label="link to Sara Fishburn's linkedin. opens in new tab">
         <svg viewBox="0 0 24 24">
           <use xlink:href='src/static/images/icons/linkedin-line.svg#linkedin-line'></use>
         </svg>
       </a>
-      <a href="https://twitter.com/FishburnSara" target="_blank">
+      <a href="https://twitter.com/FishburnSara" target="_blank" aria-label="link to Sara Fishburn's twitter. opens in new tab">
         <svg viewBox="0 0 24 24">
           <use xlink:href='src/static/images/icons/twitter-line.svg#twitter-line'></use>
         </svg>

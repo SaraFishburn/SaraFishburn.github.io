@@ -35,7 +35,8 @@
   <!-- nav and drip graphic -->
   <nav>
     <div class="logo-hamburger">
-      <a class="nav-logo" href="../index.html">
+      <!-- added aria hidden as logo link makes home nav link redundant. cant group logo anf home link together due to mobile layout -->
+      <a class="nav-logo" href="index.html" aria-hidden="true" title="logo">
         <svg viewBox="0 0 531.66 392.97">
           <use xlink:href='static/images/logo/logo.svg#logo'></use>
         </svg>
@@ -55,17 +56,17 @@
       <li><a href="contact.html">CONTACT</a></li>
       <li id="nav-socials">
         <span id="nav-media-icons">
-          <a href="https://github.com/SaraFishburn" target="_blank"> 
+          <a href="https://github.com/SaraFishburn" target="_blank" aria-label="link to Sara Fishburn's github. opens in new tab"> 
             <svg viewBox="0 0 24 24">
               <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
             </svg>
           </a>
-          <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank">
+          <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank" aria-label="link to Sara Fishburn's linkedin. opens in new tab">
             <svg viewBox="0 0 24 24">
               <use xlink:href='static/images/icons/linkedin-line.svg#linkedin-line'></use>
             </svg>
           </a>
-          <a href="https://twitter.com/FishburnSara" target="_blank">
+          <a href="https://twitter.com/FishburnSara" target="_blank" aria-label="link to Sara Fishburn's twitter. opens in new tab">
             <svg viewBox="0 0 24 24">
               <use xlink:href='static/images/icons/twitter-line.svg#twitter-line'></use>
             </svg>
@@ -91,10 +92,10 @@
     </div>
 
     <!-- heading -->
-    <section id="heading">
+    <hgroup id="heading">
       <h1>SKILLS</h1>
       <h2>(to pay the bill$)</h2>
-    </section>
+    </hgroup>
 
     <!-- skills -->
 
@@ -102,7 +103,7 @@
         <div class="bottom-circle">
           <div class="middle-circle">
             <div class="top-circle">
-              <svg viewBox="0 0 241 300" id="html">
+              <svg viewBox="0 0 241 300" id="html" aria-label="html logo">
                 <use xlink:href='static/images/skills-logos/html.svg#html'></use>
               </svg>
             </div>
@@ -114,7 +115,7 @@
         <div class="bottom-circle">
           <div class="middle-circle">
             <div class="top-circle">
-              <svg viewBox="0 0 200 200" id="js">
+              <svg viewBox="0 0 200 200" id="js" aria-label="javascript logo">
                 <use xlink:href='static/images/skills-logos/js.svg#js'></use>
               </svg>
             </div>
@@ -126,7 +127,7 @@
         <div class="bottom-circle">
           <div class="middle-circle">
             <div class="top-circle">
-              <svg viewBox="0 0 200.02 200" id="ruby">
+              <svg viewBox="0 0 200.02 200" id="ruby" aria-label="ruby logo">
                 <use xlink:href='static/images/skills-logos/ruby.svg#ruby'></use>
               </svg>
             </div>
@@ -138,7 +139,7 @@
         <div class="bottom-circle">
           <div class="middle-circle">
             <div class="top-circle">
-              <svg viewBox="0 0 248 306" id="css">
+              <svg viewBox="0 0 248 306" id="css" aria-label="css logo">
                 <use xlink:href='static/images/skills-logos/css.svg#css'></use>
               </svg>
             </div>
@@ -150,7 +151,7 @@
         <div class="bottom-circle">
           <div class="middle-circle">
             <div class="top-circle">
-              <svg viewBox="0 0 285 284" id="python">
+              <svg viewBox="0 0 285 284" id="python" aria-label="python logo">
                 <use xlink:href='static/images/skills-logos/python.svg#python'></use>
               </svg>
             </div>
@@ -162,7 +163,7 @@
         <div class="bottom-circle">
           <div class="middle-circle">
             <div class="top-circle">
-              <svg viewBox="0 0 240 284" id="flask">
+              <svg viewBox="0 0 240 284" id="flask" aria-label="flask logo">
                 <use xlink:href='static/images/skills-logos/flask.svg#flask'></use>
               </svg>
             </div>
@@ -174,7 +175,7 @@
         <div class="bottom-circle">
           <div class="middle-circle">
             <div class="top-circle">
-              <svg viewBox="0 0 345 364" id="c">
+              <svg viewBox="0 0 345 364" id="c" aria-label="c logo">
                 <use xlink:href='static/images/skills-logos/c.svg#c'></use>
               </svg>
             </div>
@@ -186,7 +187,7 @@
         <div class="bottom-circle">
           <div class="middle-circle">
             <div class="top-circle">
-              <svg viewBox="0 0 145.25 200" id="sql">
+              <svg viewBox="0 0 145.25 200" id="sql" aria-label="sql logo">
                 <use xlink:href='static/images/skills-logos/sql.svg#sql'></use>
               </svg>
             </div>
@@ -196,30 +197,29 @@
 
       <!-- peeking scratch cat -->
       <div id="scratch">
-        <svg viewBox="0 0 234 250">
+        <svg viewBox="0 0 234 250" aria-label="scratch logo">
           <use xlink:href='static/images/skills-logos/scratch.svg#scratch'></use>
         </svg>
       </div>
 
-       <!-- social media icons -->
+      <!-- social media icons -->
       <span id="media-icons">
-        <a href="https://github.com/SaraFishburn" target="_blank"> 
+        <a href="https://github.com/SaraFishburn" target="_blank" aria-label="link to Sara Fishburn's github. opens in new tab"> 
           <svg viewBox="0 0 24 24">
             <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
           </svg>
         </a>
-        <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank">
+        <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank" aria-label="link to Sara Fishburn's linkedin. opens in new tab">
           <svg viewBox="0 0 24 24">
             <use xlink:href='static/images/icons/linkedin-line.svg#linkedin-line'></use>
           </svg>
         </a>
-        <a href="https://twitter.com/FishburnSara" target="_blank">
+        <a href="https://twitter.com/FishburnSara" target="_blank" aria-label="link to Sara Fishburn's twitter. opens in new tab">
           <svg viewBox="0 0 24 24">
             <use xlink:href='static/images/icons/twitter-line.svg#twitter-line'></use>
           </svg>
         </a>
       </span>
-    
     </main>
 
     <!-- footer -->

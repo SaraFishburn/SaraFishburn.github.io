@@ -34,7 +34,8 @@
   <!-- nav and drip graphic -->
   <nav>
     <div class="logo-hamburger">
-      <a class="nav-logo" href="../index.html">
+      <!-- added aria hidden as logo link makes home nav link redundant. cant group logo and home link together due to mobile layout -->
+      <a class="nav-logo" href="index.html" aria-hidden="true" title="logo">
         <svg viewBox="0 0 531.66 392.97">
           <use xlink:href='static/images/logo/logo.svg#logo'></use>
         </svg>
@@ -53,17 +54,17 @@
       <li><a href="contact.html">CONTACT</a></li>
       <li id="nav-socials">
         <span id="nav-media-icons">
-          <a href="https://github.com/SaraFishburn" target="_blank"> 
+          <a href="https://github.com/SaraFishburn" target="_blank" aria-label="link to Sara Fishburn's github. opens in new tab"> 
             <svg viewBox="0 0 24 24">
               <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
             </svg>
           </a>
-          <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank">
+          <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank" aria-label="link to Sara Fishburn's linkedin. opens in new tab">
             <svg viewBox="0 0 24 24">
               <use xlink:href='static/images/icons/linkedin-line.svg#linkedin-line'></use>
             </svg>
           </a>
-          <a href="https://twitter.com/FishburnSara" target="_blank">
+          <a href="https://twitter.com/FishburnSara" target="_blank" aria-label="link to Sara Fishburn's twitter. opens in new tab">
             <svg viewBox="0 0 24 24">
               <use xlink:href='static/images/icons/twitter-line.svg#twitter-line'></use>
             </svg>
@@ -89,12 +90,12 @@
     </div>
 
     <!-- heading -->
-    <section id="heading">
+    <hgroup id="heading">
       <h1>RÉSUMÉ</h1>
-    </section>
+    </hgroup>
 
     <!-- resume link -->
-    <a id="resume-link" class="link-underline" href="https://drive.google.com/file/d/1E36HQe8q3xm4MKvOUeB-cTV_d8Tw4aF-/view?usp=sharing" target="_blank">View full résumé pdf here</a>
+    <a id="resume-link" class="link-underline" href="https://drive.google.com/file/d/1WeMaYO6Gl544-440FxCn-IW40wbtNBDQ/view?usp=sharing" target="_blank">View full résumé pdf here</a>
 
     <div id="content">
       <!-- education -->
@@ -104,7 +105,7 @@
             <div class="small-blue-circle"></div>
             <div class="line"></div>
           </div>
-          <h1>Education</h1>
+          <h2>Education</h2>
         </div>
   
         <!-- coder academy -->
@@ -113,15 +114,17 @@
             <div class="circle"></div>
             <div class="line"></div>
           </div>
-          <div class="text">
-            <h2>Coder Academy</h2>
-            <h3>Diploma of Information Technology</h3>
-            <h4>Feb 2021 - Present</h4>
-            <article>
+          <article>
+            <hgroup>
+              <h3>Coder Academy</h3>
+              <h4>Diploma of Information Technology</h4>
+              <h5>Feb 2021 - Present</h5>
+            </hgroup>
+            <p>
               Current fast track student at Brisbane campus. 
               Learning HTML, CSS, Ruby on Rails, React, Javascript, Mongo DB, Express, Node JS and more.
-            </article>
-          </div>
+            </p>
+          </article>
         </div>
   
         <!-- university -->
@@ -131,16 +134,18 @@
             <div class="line last-line"></div>
             <div class="small-blue-circle"></div>
           </div>
-          <div class="text">
-            <h2>University of Queensland</h2>
-            <h3>Bachelor of Civil Engineering (honours)</h3>
-            <h4>Feb 2017 - Dec 2018</h4>
-            <article>
+          <article>
+            <hgroup>
+              <h3>University of Queensland</h3>
+              <h4>Bachelor of Civil Engineering (honours)</h4>
+              <h5>Feb 2017 - Dec 2018</h5>
+            </hgroup>
+            <p>
               Incomplete degree. Skills gained include leadership, 
               teamwork, and problem solving as well as a sound knowledge of 
               discrete math and a base level understanding of the Python programming language.
-            </article>
-          </div>
+            </p>
+          </article>
         </div>
   
       </section>
@@ -152,7 +157,7 @@
             <div class="small-blue-circle"></div>
             <div class="line"></div>
           </div>
-          <h1>Employment</h1>
+          <h2>Employment</h2>
         </div>
   
         <!-- max employment -->
@@ -161,19 +166,21 @@
             <div class="circle"></div>
             <div class="line"></div>
           </div>
-          <div class="text">
-            <h2>Max Employment</h2>
-            <h3>Customer Service Team</h3>
-            <h4>Dec 2018 - Dec 2020</h4>
-            <article>
+          <article>
+            <hgroup>
+              <h3>Max Employment</h3>
+              <h4>Customer Service Team</h4>
+              <h5>Dec 2018 - Dec 2020</h5>
+            </hgroup>
+            <p>
               Employed within the call center. 
               Skills gained include time management, 
               leadership, and communication skills. 
               Responsible for training new staff.
               From April 2020 until resignation, 
               more than 50% of work was conducted from home due to covid 19.
-            </article>
-          </div>
+            </p>
+          </article>
         </div>
   
         <!-- CAP security -->
@@ -182,16 +189,18 @@
             <div class="circle"></div>
             <div class="line"></div>
           </div>
-          <div class="text">
-            <h2>CAP Security Services</h2>
-            <h3>Communication</h3>
-            <h4>Jan 2017 - Present</h4>
-            <article>
+          <article>
+            <hgroup>
+              <h3>CAP Security Services</h3>
+              <h4>Communication</h4>
+              <h5>Jan 2017 - Present</h5>
+            </hgroup>
+            <p>
               Casually Employed. Coordination of security guards via radio. 
               Ability to work under pressure, conflict resolution skills, 
               communication, problem solving, leadership, and teamwork.
-            </article>
-          </div>
+            </p>
+          </article>
         </div>
   
         <!-- woolworths -->
@@ -201,15 +210,17 @@
             <div class="line last-line"></div>
             <div class="small-blue-circle"></div>
           </div>
-          <div class="text">
-            <h2>Woolworths</h2>
-            <h3>Deli team member</h3>
-            <h4>Jun 2016 - Jan 2019</h4>
-            <article>
+          <article>
+            <hgroup>
+              <h3>Woolworths</h3>
+              <h4>Deli team member</h4>
+              <h5>Jun 2016 - Jan 2019</h5>
+            </hgroup>
+            <p>
               Predominantly customer service and food safety. 
               Ability to follow guidelines, policies, and procedures.
-            </article>
-          </div>
+            </p>
+          </article>
         </div>
   
       </section>
@@ -217,17 +228,17 @@
 
     <!-- social media icons -->
     <span id="media-icons">
-      <a href="https://github.com/SaraFishburn" target="_blank"> 
+      <a href="https://github.com/SaraFishburn" target="_blank" aria-label="link to Sara Fishburn's github. opens in new tab"> 
         <svg viewBox="0 0 24 24">
           <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
         </svg>
       </a>
-      <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank">
+      <a href="https://www.linkedin.com/in/sara-fishburn-87b6b41b9/" target="_blank" aria-label="link to Sara Fishburn's linkedin. opens in new tab">
         <svg viewBox="0 0 24 24">
           <use xlink:href='static/images/icons/linkedin-line.svg#linkedin-line'></use>
         </svg>
       </a>
-      <a href="https://twitter.com/FishburnSara" target="_blank">
+      <a href="https://twitter.com/FishburnSara" target="_blank" aria-label="link to Sara Fishburn's twitter. opens in new tab">
         <svg viewBox="0 0 24 24">
           <use xlink:href='static/images/icons/twitter-line.svg#twitter-line'></use>
         </svg>

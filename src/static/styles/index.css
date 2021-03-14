@@ -22,13 +22,17 @@ main {
   font-weight: 700;
 }
 
-#heading h3 {
-  color: var(--light-2);
+/* had to use !important due to css specificity. tried changing element to a h3 but webaim WAVE doesnt linke that */
+#intro-header-statement {
+  color: var(--light-2) !important;
   opacity: 0.6;
-  font-size: 1.2rem;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
 }
 
 /* headshot image, overlay, and hover transition */
+/* following max heights and widths dont pass due to css variables :( 
+  from all tests the calc works*/
 #headshot-wrapper {
   --hex-width: 200px;
   --hex-height: calc(var(--hex-width) / 0.8660254); /* multiplier for even hexagon height to width */
@@ -58,6 +62,8 @@ main {
   background-color: var(--accent);
   position: absolute;
   align-items: center;
+  /* fixes <figure> tag styling that was misaligning elements */
+  margin-top: 0px;
 }
 
 #headshot img {
@@ -76,7 +82,7 @@ main {
 }
 
 /* text */
-article {
+#text {
   grid-area: text;
   width: 270px;
   height: auto;
@@ -89,7 +95,7 @@ article {
 }
 
 /* highlight key words and link */
-article span, article a {
+#text span, #text a {
   color: var(--accent);
   position: relative;
 }
