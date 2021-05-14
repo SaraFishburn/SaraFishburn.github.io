@@ -16,6 +16,15 @@ main {
   font-size: 1rem;
 }
 
+h6 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  max-width: 500px;
+  min-width: 200px;
+}
 
 form {
   position: relative;
