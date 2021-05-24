@@ -181,32 +181,33 @@ time {
   margin-bottom: 20px;
 }
 
-#portfolio {
+#possible {
   grid-area: folio;
 }
 
-#filter {
+#portfolio {
   grid-area: filter;
+}
+
+#filter {
+  grid-area: possible;
 }
 
 #dots {
   grid-area: dots;
 }
 
-#possible {
-  grid-area: possible;
-}
 
 #flossily {
   grid-area: floss;
 }
 
-#flossily svg, #filter svg{
+#flossily svg, #filter svg, #possible svg {
   fill: white;
   height: 30px;
   stroke: var(--dark-4);
 }
 
-#flossily svg:hover, #filter svg:hover{
+#flossily svg:hover, #filter svg:hover, #possible svg:hover{
   fill: var(--accent);
 }

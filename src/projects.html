@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="static/styles/global-tablet.css" integrity="sha384-5acWLXz9rMWOl3gBBR5mM+l++MBvP4sMyZKrm5dYkwT6dXjMQr6yHFiWZXMPirf9">
   <link rel="stylesheet" href="static/styles/global-desktop.css" integrity="sha384-YrlZD1nF7CzUGr80k/WMY4T9gKS9UN2mPAuDe8+hFkYclZqqlq7WMzNO97niXF+Y">
 
-  <link rel="stylesheet" href="static/styles/projects.css" integrity="sha384-RNKyiYkV0IwZpXTzBQdL4Ay5ufYLOmU78ZPWKdp5DINygnb/EmdG2pxQRkvC5+mH">
+  <link rel="stylesheet" href="static/styles/projects.css" integrity="sha384-vI0ptJ62j9X/XPPPvFmy6p1uQTlptFY0R/wMeTgg545nEehGO/yTJ8J96SRcFNOw">
   <link rel="stylesheet" href="static/styles/projects-tablet.css" integrity="sha384-cGJGBYohxb0RNZPrOdPxSxT0E+KvkasDeSaSz6/IHR/8FGlulc73jTrpATFw94ZO">
   <link rel="stylesheet" href="static/styles/projects-desktop.css" integrity="EzszmWtsJhYvgYLN49ww5GJgV3GRDxumah82PnlzYXqIZEEp7D1TmjaoQ9miux7V">
 
@@ -125,12 +125,43 @@
     of the correpsonding project div so easier to understand for screen reader.
     also note in tablet and above project headings are opacity: 0 not display: none so still readable by screen readers -->
     <ul id="tabs" aria-hidden="true">
+      <li id="possible-tab">Tetris Terminal App</li>
       <li id="folio-tab">Old Portfolio</li>
       <li id="filter-tab">Filter</li>
       <li id="dots-tab">Dots</li>
-      <li id="possible-tab">Project Possible</li>
       <li id="flossily-tab">Flossily</li>
     </ul>
+
+    <!-- tetris terminal app -->
+    <div class="project hide-project" id="possible">
+      <div class="monitor">
+        <div class="image-border">
+          <figure class="image-wrapper">
+            <img src="static/images/projects/tetris.png" alt="screen shot of the tetris terminal application">
+          </figure>
+        </div>
+        <div class="frame-base">
+          <div class="left-stand"></div>
+          <div class="bottom-stand"></div>
+          <div class="right-stand"></div>
+        </div>
+      </div>
+      <article>
+        <h2>- Tetris Terminal App -</h2>
+        <time datetime="2021-04-12">April 2021</time>
+        <p>
+          A Tetris clone written in 
+          <span>Ruby</span>
+          in 2 weeks. 
+          It uses the Curses gem and a custom square font in the terminal to display and scale the game board.
+        </p>
+        <a href="https://github.com/SaraFishburn/SaraFishburn_T1A3" target="_blank" aria-label="link to 'Tetris' github project"> 
+          <svg viewBox="0 0 24 24">
+            <use xlink:href='static/images/icons/github-line.svg#github-line'></use>
+          </svg>
+        </a>
+      </article>
+    </div>
 
     <!-- portfolio -->
     <div class="project hide-project" id="portfolio">
@@ -154,7 +185,7 @@
           <span>HTML</span>, 
           <span>CSS</span>, and
           <span>Javascript</span>. 
-          Made as the eigth project for Harvard's online CS50 - Introduction to 
+          Made as the eighth project for Harvard's online CS50 - Introduction to 
           Computer Science course.
         </p>
         <p><a class="link link-underline" href="http://sara-fishburn-portfolio.s3-website-ap-southeast-2.amazonaws.com/index.html" target="_blank">Check it out here</a></p>
@@ -198,7 +229,7 @@
         </a> 
       </article>
     </div>
-        
+
     <!-- dots -->
     <div class="project hide-project" id="dots">
       <div class="monitor">
@@ -225,37 +256,7 @@
         </p>
       </article>
     </div>
-    
-    <!-- project possible -->
-    <div class="project hide-project" id="possible">
-      <div class="monitor">
-        <div class="image-border">
-          <figure class="image-wrapper" aria-label="embedded scratch game">
-            <iframe class="project-preview" src="https://scratch.mit.edu/projects/434747043/embed" allowfullscreen=""></iframe>
-          </figure>
-        </div>
-        <div class="frame-base">
-          <div class="left-stand"></div>
-          <div class="bottom-stand"></div>
-          <div class="right-stand"></div>
-        </div>
-      </div>
-      <article>
-        <h2>- Project Possible -</h2>
-        <time datetime="2020-10-10">July 2020</time>
-        <p>Created for CS50's Problem Set 0.</p>
-        <p>
-          An endless runner game built in 
-          <span>Scratch</span>
-          which continuosly 
-          increases in speed and randomly generates obstacles. Includes 
-          animations for running, jumping, and rolling as well as explosions on collisions with obstacles.
-        </p>
-        <p>Press space to jump and down arrow to roll.</p>
-        <small>*note: Sorry! scratch games cant be played on mobile :(</small>
-      </article>
-    </div>
-    
+
     <!-- flossily -->
     <div class="project hide-project" id="flossily">
       <div class="monitor">
