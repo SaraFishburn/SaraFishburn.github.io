@@ -2,11 +2,11 @@
 
 ## URL to published portfolio website
 
-https://sarafishburn.github.io/
+https://sarafishburndev.github.io/
 
 ## Link to portfolio GitHub repository
 
-https://github.com/SaraFishburn/SaraFishburn.github.io
+https://github.com/SaraFishburn/SaraFishburnDev.github.io
 
 ## Description of portfolio website
 
